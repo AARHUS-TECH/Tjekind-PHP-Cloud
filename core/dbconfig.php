@@ -1,9 +1,10 @@
 <?php
-/****************************************************/
-/************** Created by : Vivek Gupta ************/
-/***************     www.vsgupta.in     *************/
-/***************     www.iotmonk.com     *************/
-/****************************************************/ 
+/**
+ * Configueation for connection to database
+ *
+ * @author Karsten Reitan Sørensen <krs@aarhustech.dk>
+ */
+
 
 define('DB_USER',     "database user name");     // Your database user name
 define('DB_PASSWORD', "database password");	     // Your database password (mention your db password here)
