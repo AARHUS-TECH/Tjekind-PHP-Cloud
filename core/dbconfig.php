@@ -1,8 +1,9 @@
 <?php
 /**
- * Configueation for connection to database
- *
+ * @file   dbconfig.h
+ * @brief  Configueation for connection to database
  * @author Karsten Reitan Sørensen <krs@aarhustech.dk>
+ * @bug    No known bugs
  */
 
 
