@@ -65,3 +65,5 @@ https://www.typescriptlang.org/
 
 Since im using a backend platform of php i don´t think GraphQL will be necessary
 
+# Files
+insert.php
