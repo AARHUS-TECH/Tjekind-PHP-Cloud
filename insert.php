@@ -21,7 +21,7 @@ if (isset($_GET['temp']) && isset($_GET['hum'])) {
     $db = new DB_CONNECT();
  
     // Fire SQL query to insert data in weather
-    $result = mysql_query("INSERT INTO weather(temp,hum) VALUES('$temp','$hum')");
+    $result = mysqli_query("INSERT INTO weather(temp,hum) VALUES('$temp','$hum')");
  
     // Check for succesfull execution of query
     if ($result) {
