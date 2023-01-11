@@ -77,6 +77,23 @@ class SendMail
 			return false;
 		}
 	}
+
+	
+	public static function test_send_mail() {
+		if ( SendMail::is_php_mail_available() )
+		{
+			$subject = "This is subject";
+
+			$message  = "<b>This is HTML message.</b>";
+			$message .= "<h1>This is headline.</h1>";
+
+			$mail = new SendMail(0, $subject, $message);
+
+			if( $mail->is_mail_valid() )
+				$mail->send_the_mail();
+		}
+	}
+
 	
 	// Action methods
 	function is_mail_valid() {
@@ -88,7 +105,7 @@ class SendMail
 	
 	
 	function send_the_mail() {
-		print_r($this->to . "\n\r" . $this->subject . "\n\r" . $this->message . "\n\r" . $this->headers);
+		//print_r($this->to . "\n\r" . $this->subject . "\n\r" . $this->message . "\n\r" . $this->headers);
 		$retval = mail($this->to, $this->subject, $this->message, $this->headers);
          
         if( $retval == true ) {
@@ -97,27 +114,5 @@ class SendMail
 			echo "Message could not be sent...";
         }
 	}
-}
-
-if ( function_exists( 'mail' ) )
-{
-    echo 'mail() is available';
-}
-else
-{
-    echo 'mail() has been disabled';
-}
-
-if ( SendMail::is_php_mail_available() )
-{
-	$subject = "This is subject";
-
-	$message  = "<b>This is HTML message.</b>";
-	$message .= "<h1>This is headline.</h1>";
-
-	$mail = new SendMail(0, $subject, $message);
-
-	if( $mail->is_mail_valid() )
-		$mail->send_the_mail();
 }
 ?>
