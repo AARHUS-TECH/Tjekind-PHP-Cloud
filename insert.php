@@ -14,17 +14,20 @@ if (isset($_GET['temp']) && isset($_GET['hum'])) {
  
     // Include data base connect class
     $filepath = realpath (dirname(__FILE__));
-	require_once($filepath."/db_connect.php");
-
+	require_once($filepath."/core/dbconnect.php");
  
     // Connecting to database 
-    $db = new DB_CONNECT();
+    //$db = new DB_CONNECT();
+	$filepath = realpath (dirname(__FILE__));
+    require_once($filepath."/core/dbconfig.php");
+	$con = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE) or die( mysqli_error() );
  
     // Fire SQL query to insert data in weather
-    $result = mysqli_query("INSERT INTO weather(temp,hum) VALUES('$temp','$hum')");
- 
+	$sql = "INSERT INTO weather(temperature, humidity) VALUES ('$temp','$hum')";
+	echo "\$sql = $sql\n\r";
+	
     // Check for succesfull execution of query
-    if ($result) {
+    if ($con->query($sql) === TRUE) {
         // successfully inserted 
         $response["success"] = 1;
         $response["message"] = "Weather successfully created.";
@@ -34,7 +37,7 @@ if (isset($_GET['temp']) && isset($_GET['hum'])) {
     } else {
         // Failed to insert data in database
         $response["success"] = 0;
-        $response["message"] = "Something has been wrong";
+        $response["message"] = "Something has gone wrong";
  
         // Show JSON response
         echo json_encode($response);

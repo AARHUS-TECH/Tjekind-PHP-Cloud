@@ -19,23 +19,30 @@ class DB_CONNECT {
 
         //importing dbconfig.php file which contains database credentials 
         $filepath = realpath (dirname(__FILE__));
-
         require_once($filepath."/dbconfig.php");
         
 		// Connecting to mysql (phpmyadmin) database
-        $con = mysql_connect(DB_SERVER, DB_USER, DB_PASSWORD) or die(mysql_error());
+        $con = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE) or die( mysqli_error() );
  
         // Selecing database
-        $db = mysql_select_db(DB_DATABASE) or die(mysql_error()) or die(mysql_error());
+        //$db = mysqli_select_db($con, DB_DATABASE) or die( mysql_error() );
  
-        // returing connection cursor
+		// Check connection
+		if ($con->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		} else {
+			echo "Connected successfully";
+		}
+
+        
+		// returing connection cursor
         return $con;
     }
  
 	// Function to close the database
     function close() {
         // Closing data base connection
-        mysql_close();
+        mysqli_close();
     }
  
 }
