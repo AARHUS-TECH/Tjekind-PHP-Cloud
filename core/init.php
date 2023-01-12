@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Beskrivelse kommer snarest
  *

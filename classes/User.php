@@ -1,8 +1,9 @@
-﻿<?php 
-
+<?php 
 	class User {
 
 		private $_db;
+		public $sorting;
+		public $sortdirection;
 
 		function __construct() {
 			$this->_db = new Database();
