@@ -15,7 +15,7 @@ $GLOBALS['config'] = array(
         'charset'   => 'utf8',                                           # Database Charset
 		'dbname'    => 'ats_skpdatait_dk_tjekind',
 		'dbserver'  => 'localhost'
-  ),
+    ),
     'tjek_ind' => array(
         'min' => '730',                                                 # Minimum klokkeslæt for tjek ind
         'max' => '830',                                                 # Maksimum klokkeslæt for tjek ind
@@ -34,8 +34,5 @@ $GLOBALS['config'] = array(
 );
 
 spl_autoload_register(function($class) {
-	//$filepath = realpath (dirname(__FILE__));
-	//echo "\n\r$filepath\n\r";
-	//require_once $filepath . '/classes/' . $class . '.php';
     require_once $_SERVER["DOCUMENT_ROOT"] . '/cloud/classes/' . $class . '.php';
 });

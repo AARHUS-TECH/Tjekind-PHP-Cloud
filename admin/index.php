@@ -2,11 +2,9 @@
 require_once('../core/init.php');
 
 $user = new User();
-
 $user->auth();
-?>
 
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">

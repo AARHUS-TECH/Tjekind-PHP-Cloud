@@ -1,8 +1,8 @@
 <?php
 require_once('core/init.php');
 
-//$user = new User();
-//$user->auth();
+$user = new User();
+$user->auth();
 ?>
 
 <!DOCTYPE html>
