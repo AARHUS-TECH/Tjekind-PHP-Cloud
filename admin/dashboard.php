@@ -12,10 +12,10 @@ if(Session::exists('userID')) {
 	Redirect::to('/');
 }
 
-$userdata = $user->getInfo(Session::get('userID'));
 
-$filter   = ( isset($_REQUEST['filter']) && $_REQUEST['filter']!='' )?$_REQUEST['filter']:0;
-$y        = ( isset($_REQUEST['y'])      && $_REQUEST['y']!='')?$_REQUEST['y']:0;
+$userdata     = $user->getInfo(Session::get('userID'));
+$filter       = ( isset($_REQUEST['filter']) && $_REQUEST['filter']!='' )?$_REQUEST['filter']:0;
+$y            = ( isset($_REQUEST['y'])      && $_REQUEST['y']!='')?$_REQUEST['y']:0;
 $inactiveElev = ( isset($_REQUEST['inactiveElev']) && $_REQUEST['inactiveElev']!='')?$_REQUEST['inactiveElev']:'unchecked';
 
 //Tjek ind og tjek ud for dashboard ikoner
@@ -61,57 +61,36 @@ else if(isset($_REQUEST['status']) == 1)
 	<body onload="refreshTable();">
 		<div class="container-fluid dashboard-mobile">
 			<div class="row">
-				<div class="col" style="margin-top: 50px;">
+				<div class="col">
 					<div class="card card-default">
 
-						<?php //echo Errors::getErrorMessage('admin_error'); ?>
-						<?php //echo Errors::getSuccessMessage('admin_success'); ?>
+						<?php echo Errors::getErrorMessage('admin_error'); ?>
+						<?php echo Errors::getSuccessMessage('admin_success'); ?>
+
+						<nav class="navbar navbar-expand-lg navbar-light bg-light">
+							<a class="navbar-brand" href="#">Oversigt - Instruktør</a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+								<div class="navbar-nav">
+									<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+									<a class="nav-item nav-link" href="opretElev.php?y=<?php echo $y.'&filter='.$filter; ?>">Opret elev</a>
+									<a class="nav-item nav-link disabled" href="#multiCollapseInactiveStudents" aria-controls="multiCollapseExample1" id="inactivebtn">Vis inaktive</a>
+									<a id="instructor" class="nav-item nav-link disabled" href="#multiCollapseInstructor"data-toggle="collapse"  aria-expanded="false" aria-controls="multiCollapseExample1">Vis instruktør</a>
+									<a class="btn btn-success" href="logout.php" type="button" class="btn btn-secondary">Log ud</a>
+									<!-- begin: Knap som trigger modal vindue til input for kort data
+									 HTML koden til modal vindue findes længere nede efterfulgt
+									 af JavaScript koden. Benytter ajaxResponse.php og
+									 funtionen ajaxGetData($cardnumber) i User.php -->
+									<a class="nav-item nav-link disabled" href="#" data-toggle="modal" data-target="#exampleModalCenter">Tjek kort</a>
+									<!-- end: -->
+									<a class="nav-item nav-link disabled" href="#">Logud</a>
+								</div>
+							</div>
+						</nav>
 
 						<div id="splash" class="card-body">
-							<h3 class="text-center" style="font-variant: small-caps;">Oversigt - Instruktør</h3>
-							<!-- h6 class="text-center"><strong>Logget ind som:</strong><?php echo $userdata['fulde_navn']; ?></h6 -->
-							<br />
-							<center>
-								<div id="top-menu-btn-group" class="btn-group" role="group" aria-label="instructorOverview">
-									<a id="new-student-btn" class="btn btn-success" href="opretElev.php?y=<?php echo $y.'&filter='.$filter; ?>" type="button" class="btn btn-secondary">Opret elev</a>
-									<a 
-										class="btn btn-success" 
-										id="inactivebtn" 
-										href="#multiCollapseInactiveStudents" 
-										data-toggle="collapse" 
-										type="button" 
-										aria-expanded="true" 
-										aria-controls="multiCollapseExample1" 
-										class="btn btn-secondary" 
-									>Vis inaktive</a>
-									<!-- begin: Knap som trigger modal vindue til input for kort data
-								         HTML koden til modal vindue findes længere nede efterfulgt
-										 af JavaScript koden. Benytter ajaxResponse.php og
-										 funtionen ajaxGetData($cardnumber) i User.php -->
-									<a 
-										id="new-instructor-btn" 
-										h ref="opretInstruktoer.php?y=<?php echo $y.'&filter='.$filter; ?>" 
-										type="button" 
-										class="btn btn-success btn-secondary"
-										onclick="" 
-										data-toggle="modal" 
-										data-target="#exampleModalCenter"
-									>Tjek kort</a>
-									<!-- end: -->
-									<a 
-										class="btn btn-success" 
-										id="instructor" 
-										data-toggle="collapse" 
-										href="#multiCollapseInstructor" 
-										type="button" 
-										aria-expanded="false" 
-										aria-controls="multiCollapseExample1"
-									>Vis instruktør</a>
-									<a class="btn btn-success" href="logout.php" type="button" class="btn btn-secondary">Log ud</a>
-								</div>
-							</center>
-							<br />
-
 							<!-- Modal vindue for at tjekke kort data -->
 							<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 								<div class="modal-dialog modal-dialog-centered" role="document">
