@@ -1,0 +1,118 @@
+body {
+    background: url('/assets/images/Mekaniker-baggrund3.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.card {
+    background: transparent;
+}
+.card-body {
+    background-color: #222222;
+    border: 1px solid #000000;
+    /* box-shadow: #000000 3px 3px 5px; */
+}
+
+.table-striped {
+    border: 1px solid #000000;
+}
+
+.table-striped>tbody>tr {
+    font-size: 13px;
+    border-top: 2px solid #000000;
+}
+
+.table-striped>thead>tr {
+    font-size: 14px;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #1b1b1b;
+}
+.table-striped>tbody>tr:nth-of-type(even) {
+    background-color: #141414;
+}
+
+.table>thead>tr>th {
+    background-color: #111111;
+}
+
+.table th, .table td {
+    border-top: 1px solid #000000 !important;
+    vertical-align: middle;
+}
+
+.table thead th {
+    border-bottom: 2px solid #000000 !important;
+}
+
+.vcenter {
+  min-height: 100%;  /* Fallback for vh unit */
+  min-height: 100vh; /* You might also want to use
+                        'height' property instead.
+
+                        Note that for percentage values of
+                        'height' or 'min-height' properties,
+                        the 'height' of the parent element
+                        should be specified explicitly.
+
+                        In this case the parent of '.vertical-center'
+                        is the <body> element */
+
+  /* Make it a flex container */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  /* Align the bootstrap's container vertically */
+    -webkit-box-align : center;
+  -webkit-align-items : center;
+       -moz-box-align : center;
+       -ms-flex-align : center;
+          align-items : center;
+
+  /* In legacy web browsers such as Firefox 9
+     we need to specify the width of the flex container */
+  width: 100%;
+
+  /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+     hence the bootstrap's container won't be aligned to the center anymore.
+
+     Therefore, we should use the following declarations to get it centered again */
+         -webkit-box-pack : center;
+            -moz-box-pack : center;
+            -ms-flex-pack : center;
+  -webkit-justify-content : center;
+          justify-content : center;
+}
+
+.btn-full-width {
+    width: 100%;
+}
+
+td {
+    font-size: 14px;
+	color: white;
+}
+
+#studiekort {
+    opacity: 1;
+    /* margin-top: -60px; */
+}
+
+.alert {
+    margin: o 1rem;
+}
+
+.btn-outline-white {
+    color: white;
+    background: none;
+    border-color: white;
+}
+.btn-outline-white:hover {
+    color: black;
+    background: white;
+    border-color: white;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}

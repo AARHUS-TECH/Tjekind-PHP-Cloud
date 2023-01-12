@@ -24,8 +24,8 @@ $token_whitelist = [
 	];
 	
 $region_mail = [
-	0 => "krs@aarhustech.dk",
-	1 => "krs@aarhustech.dk",
-	2 => "krs@aarhustech.dk",
+	"krs@aarhustech.dk",
+	"krs@aarhustech.dk",
+	"krs@aarhustech.dk",
 	];
 ?>
