@@ -18,16 +18,16 @@ if (isset($_GET["id"])) {
     $id = $_GET['id'];
  
      // Fire SQL query to get weather data by id
-    $result = mysql_query("SELECT *FROM weather WHERE id = '$id'");
+    $result = mysqli_query("SELECT *FROM weather WHERE id = '$id'");
 	
 	//If returned result is not empty
     if (!empty($result)) {
 
         // Check for succesfull execution of query and no results found
-        if (mysql_num_rows($result) > 0) {
+        if (mysqli_num_rows($result) > 0) {
 			
 			// Storing the returned array in response
-            $result = mysql_fetch_array($result);
+            $result = mysqli_fetch_array($result);
 			
 			// temperoary user array
             $weather = array();
