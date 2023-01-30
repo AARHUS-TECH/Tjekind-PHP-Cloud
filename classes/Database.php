@@ -38,8 +38,12 @@ class Database {
     * @param  array  $data associative array
     * @return array  recordset
     */
+<<<<<<< HEAD
     public function custom_query( $sql,$data=null) 
     {
+=======
+    public function custom_query( $sql,$data=null) {
+>>>>>>> 35c145e (Init fra ssh server)
         if ($data!==null) {
             $dat=array_values($data);
         }
@@ -60,8 +64,12 @@ class Database {
     /**
      * begin a transaction.
      */
+<<<<<<< HEAD
     public function begin_transaction()
     {
+=======
+    public function begin_transaction() {
+>>>>>>> 35c145e (Init fra ssh server)
         $this->pdo->setAttribute(PDO::ATTR_AUTOCOMMIT, 0);
         $this->pdo->beginTransaction();
     }
@@ -70,8 +78,12 @@ class Database {
     /**
      * commit the transaction.
      */
+<<<<<<< HEAD
     public function commit()
     {
+=======
+    public function commit() {
+>>>>>>> 35c145e (Init fra ssh server)
         $this->pdo->commit();
         $this->pdo->setAttribute(PDO::ATTR_AUTOCOMMIT, 1);
     }
@@ -80,8 +92,12 @@ class Database {
     /**
      * rollback the transaction.
      */
+<<<<<<< HEAD
     public function rollback()
     {
+=======
+    public function rollback() {
+>>>>>>> 35c145e (Init fra ssh server)
         $this->pdo->rollBack();
         $this->pdo->setAttribute(PDO::ATTR_AUTOCOMMIT, 1);
     }
@@ -94,8 +110,12 @@ class Database {
     * @param  string $val value column
     * @return array recordset
     */
+<<<<<<< HEAD
     public function fetch_single_row($table,$col,$val)
     {
+=======
+    public function fetch_single_row( $table, $col, $val ) {
+>>>>>>> 35c145e (Init fra ssh server)
         $nilai=array($val);
         $sel = $this->pdo->prepare("SELECT * FROM $table WHERE $col=?");
         $sel->execute($nilai);
@@ -111,8 +131,12 @@ class Database {
     * @param  string $table table name
     * @return array recordset
     */
+<<<<<<< HEAD
     public function fetch_all($table)
     {
+=======
+    public function fetch_all($table) {
+>>>>>>> 35c145e (Init fra ssh server)
         $sel = $this->pdo->prepare("SELECT * FROM $table");
         $sel->execute();
         $sel->setFetchMode( PDO::FETCH_OBJ );
@@ -126,8 +150,12 @@ class Database {
     * @param  array $dat specific column selection
     * @return array recordset
     */
+<<<<<<< HEAD
     public function fetch_col($table,$dat)
     {
+=======
+    public function fetch_col($table,$dat) {
+>>>>>>> 35c145e (Init fra ssh server)
         if( $dat !== null )
         $cols= array_values( $dat );
         $col=implode(', ', $cols);
@@ -145,9 +173,13 @@ class Database {
     * @param  array $where what column will be the condition
     * @return array recordset
     */
+<<<<<<< HEAD
     public function fetch_multi_row($table,$col,$where)
     {
 
+=======
+    public function fetch_multi_row($table,$col,$where) {
+>>>>>>> 35c145e (Init fra ssh server)
         $data = array_values( $where );
         //grab keys
         $cols=array_keys($where);
@@ -171,6 +203,10 @@ class Database {
         return  $sel;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 35c145e (Init fra ssh server)
     /**
     * fetch row with condition
     * @param  string order ASC or DESC
@@ -180,8 +216,12 @@ class Database {
     * @param  array $where what column will be the condition
     * @return array recordset
     */
+<<<<<<< HEAD
     public function fetch_multi_row_order($table,$col,$where,$order,$index)
     {
+=======
+    public function fetch_multi_row_order( $table, $col, $where, $order, $index ) {
+>>>>>>> 35c145e (Init fra ssh server)
         $data = array_values( $where );
         //grab keys
         $cols=array_keys($where);
@@ -252,7 +292,11 @@ class Database {
     * @param  array $where where condition
     * @return array recordset
     */
+<<<<<<< HEAD
     public function search($table,$col,$where) {
+=======
+    public function search( $table, $col, $where ) {
+>>>>>>> 35c145e (Init fra ssh server)
         $data = array_values( $where );
         foreach ($data as $key) {
            $val = '%'.$key.'%';
@@ -286,8 +330,12 @@ class Database {
      * get last insert id
      * @return int last insert id
      */
+<<<<<<< HEAD
     public function get_last_id()
     {
+=======
+    public function get_last_id() {
+>>>>>>> 35c145e (Init fra ssh server)
         return $this->pdo->lastInsertId();
     }
 
@@ -297,8 +345,12 @@ class Database {
     * @param  string $table table name
     * @param  array $dat   associative array 'column_name'=>'val'
     */
+<<<<<<< HEAD
     public function insert($table,$dat) 
     {
+=======
+    public function insert( $table, $dat ) {
+>>>>>>> 35c145e (Init fra ssh server)
 
         if( $dat !== null )
         $data = array_values( $dat );
@@ -326,6 +378,7 @@ class Database {
     * @param  string $id    primary key column name
     * @param  int $val   key value
     */
+<<<<<<< HEAD
     public function update($table,$dat,$id,$val) {
         if( $dat !== null )
         $data = array_values( $dat );
@@ -337,6 +390,23 @@ class Database {
         $mark[]=$col."=?";
         }
         $im=implode(', ', $mark);
+=======
+    public function update( $table, $dat, $id, $val ) {
+        if( $dat !== null )
+			$data = array_values( $dat );
+		
+        array_push( $data, $val );
+        
+		//grab keys
+        $cols=array_keys($dat);
+        $mark=array();
+        foreach ($cols as $col) {
+			$mark[]=$col."=?";
+        }
+        
+		$im=implode(', ', $mark);
+				
+>>>>>>> 35c145e (Init fra ssh server)
         $ins = $this->pdo->prepare("UPDATE $table SET $im where $id=?");
         $ins->execute( $data );
     }

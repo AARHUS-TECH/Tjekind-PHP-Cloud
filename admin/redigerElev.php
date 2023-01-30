@@ -74,9 +74,21 @@ if($updatedata['iSKP'] == 1) {
 		<meta charset="utf-8">
 		<title>Tjek ind | Aarhus Tech SKP</title>
 
+<<<<<<< HEAD
 		<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/custom.css">
 	</head>
+=======
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+
+		<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.scss">
+		<link rel="stylesheet" type="text/css" href="/assets/css/custom.scss">
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+	</head>s
+>>>>>>> 35c145e (Init fra ssh server)
 	<body>
 		<div class="container">
 			<div class="row">
