@@ -546,7 +546,6 @@
 		public function getStatusClass($value) {
 			switch($value) {
 				case '0':
-<<<<<<< HEAD
 					$status = 'table-danger';
 					break;
 				case '1':
@@ -557,7 +556,6 @@
 					break;
 				default:
 					$status = 'table-default';
-=======
 					$status = 'text-bg-danger';
 					break;
 				case '1':
@@ -568,7 +566,6 @@
 					break;
 				default:
 					$status = 'text-bg-default';
->>>>>>> 35c145e (Init fra ssh server)
 			}
 
 			return $status;
