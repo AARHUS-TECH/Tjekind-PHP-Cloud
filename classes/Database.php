@@ -38,12 +38,8 @@ class Database {
     * @param  array  $data associative array
     * @return array  recordset
     */
-<<<<<<< HEAD
     public function custom_query( $sql,$data=null) 
     {
-=======
-    public function custom_query( $sql,$data=null) {
->>>>>>> 35c145e (Init fra ssh server)
         if ($data!==null) {
             $dat=array_values($data);
         }
@@ -84,8 +80,6 @@ class Database {
     /**
      * rollback the transaction.
      */
-    public function rollback()
-    {
     public function rollback() {
         $this->pdo->rollBack();
         $this->pdo->setAttribute(PDO::ATTR_AUTOCOMMIT, 1);
@@ -115,12 +109,12 @@ class Database {
     * @param  string $table table name
     * @return array recordset
     */
-    public function fetch_all($table)
+    public function fetch_all($table) 
     {
-    public function fetch_all($table) {
         $sel = $this->pdo->prepare("SELECT * FROM $table");
         $sel->execute();
         $sel->setFetchMode( PDO::FETCH_OBJ );
+
         return $sel;
     }
 
@@ -131,18 +125,15 @@ class Database {
     * @param  array $dat specific column selection
     * @return array recordset
     */
-<<<<<<< HEAD
-    public function fetch_col($table,$dat)
+    public function fetch_col($table,$dat) 
     {
-=======
-    public function fetch_col($table,$dat) {
->>>>>>> 35c145e (Init fra ssh server)
         if( $dat !== null )
         $cols= array_values( $dat );
         $col=implode(', ', $cols);
         $sel = $this->pdo->prepare("SELECT $col from $table");
         $sel->execute();
         $sel->setFetchMode( PDO::FETCH_OBJ );
+
         return $sel;
     }
 
@@ -175,6 +166,7 @@ class Database {
 
         $sel->execute( $data );
         $sel->setFetchMode( PDO::FETCH_OBJ );
+        
         return  $sel;
     }
 
@@ -188,12 +180,8 @@ class Database {
     * @param  array $where what column will be the condition
     * @return array recordset
     */
-<<<<<<< HEAD
-    public function fetch_multi_row_order($table,$col,$where,$order,$index)
+    public function fetch_multi_row_order( $table, $col, $where, $order, $index ) 
     {
-=======
-    public function fetch_multi_row_order( $table, $col, $where, $order, $index ) {
->>>>>>> 35c145e (Init fra ssh server)
         $data = array_values( $where );
         //grab keys
         $cols=array_keys($where);

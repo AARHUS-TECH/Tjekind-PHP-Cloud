@@ -660,13 +660,13 @@
 			$this->_db->update('tjekind_brugere', $data, 'userID', $userID);
 			$this->createLogStart($userID); //Laver historik på tjek ind
 		} 
-		public function tjekUd($userID) {
+		public function tjekUd( $userID, $time = null ) {
 			$data = array(
 				'status'			=> '0'
 			);
 
 			$this->_db->update('tjekind_brugere', $data, 'userID', $userID);
-			$this->createLogSlut($userID); //Laver historik på tjek ud
+			//$this->createLogSlut($userID); //Laver historik på tjek ud
 		}
 
 		public function elevControls($userID, $currentStatus) {

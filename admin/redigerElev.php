@@ -102,7 +102,7 @@ if($updatedata['iSKP'] == 1) {
 									<br /><br />
 								</div>
 								<div class="col-md-11 offset-1">
-									<form class="form-horizontal" method="post" style="">
+									<form class="form-horizontal" method="post">
 										<fieldset>
 											<div class="form-group">
 											<label for="inputFornavn" class="col-lg-6 control-label">Fornavn(e)</label>
