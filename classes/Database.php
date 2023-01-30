@@ -154,13 +154,7 @@ class Database {
     * @param  array $where what column will be the condition
     * @return array recordset
     */
-<<<<<<< HEAD
-    public function fetch_multi_row($table,$col,$where)
-    {
-
-=======
     public function fetch_multi_row($table,$col,$where) {
->>>>>>> 35c145e (Init fra ssh server)
         $data = array_values( $where );
         //grab keys
         $cols=array_keys($where);
