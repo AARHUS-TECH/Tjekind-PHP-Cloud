@@ -48,15 +48,13 @@ else if(isset($_REQUEST['status']) == 1)
 ?><!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+	<meta charset="UTF-8">
 		<title>Tjek ind | Aarhus Tech SKP</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="/assets/css/custom.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/mobile.css">
-
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
 	</head>
 	
@@ -370,7 +368,6 @@ else if(isset($_REQUEST['status']) == 1)
 		<script src="/assets/js/bootstrap.min.js"></script>
 		<script src="/assets/js/dismiss-alerts.js"></script>
 		<script src="/assets/js/sortlist.js"></script>
-		<script src="/assets/js/scroll.js"></script>
 		
 		<script>
 			var y = <?php echo (isset($_REQUEST['y']))?$_REQUEST['y']:0; ?>;
