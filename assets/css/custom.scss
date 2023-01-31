@@ -7,8 +7,10 @@
 /**/
 
 body {
-    background: url('/assets/images/elektriker-bg_001.jpg') no-repeat center center fixed;
+    background: url('/assets/images/elektriker-bg_002.jpg') no-repeat center center fixed;
     background-size: cover;
+    overflow: hidden;
+    margin-left: -34px;
 }
 
 .card {
