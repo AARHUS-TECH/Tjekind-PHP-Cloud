@@ -1,9 +1,7 @@
 @import "mobile.css";
-
 body {
     /* background: url('/assets/images/Mekaniker-baggrund3.png') no-repeat center center fixed; */
     /* background-size: cover; */
-	
 }
 
 .card {
@@ -17,7 +15,7 @@ body {
 }
 
 #splash {
-	border-radius: 15px;
+    border-radius: 15px;
 }
 
 .table-striped {
@@ -126,8 +124,7 @@ td {
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
 }
 
-#brugernavn-form-group,  
+#brugernavn-form-group,
 #adgangskode-form-group {
-	margin-bottom: 20px;
-
+    margin-bottom: 20px;
 }
