@@ -22,7 +22,7 @@ path = "/var/www/cloud" # "/home/username/website"
 log_path = "/var/www/cloud/logs/auto-git-pull.log" # "/home/username/website/logs/auto-git-pull.log"
 
 # Define the time between each pull
-time_between_pulls = 20 # 5 minutes (5 * 60 seconds)
+time_between_pulls = 30 # 5 minutes (5 * 60 seconds)
 
 # Define the time between each log
 time_between_logs = time_between_pulls # 3600 = 1 hour
@@ -39,8 +39,8 @@ while True:
     if time.time() - last_log > time_between_logs:
         last_log = time.time()
         print("Auto git pull at " + str(datetime.datetime.now()) + "") if (DEBUG) else None
-        #with open(log_path, "a") as f:
-        #    f.write("Auto git pull at " + str(datetime.datetime.now()) + "")
+        with open(log_path, "a") as f:
+            f.write("Auto git pull at " + str(datetime.datetime.now()) + "")
             
             
 
