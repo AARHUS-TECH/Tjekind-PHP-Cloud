@@ -33,7 +33,7 @@ last_log = 0
 while True:
     if time.time() - last_pull > time_between_pulls:
         last_pull = time.time()
-        print("cd " + path + " && git pull") if (DEBUG) else None
+        print("cd " + path + " && git stash && git pull") if (DEBUG) else None
         os.system("cd " + path + " && git pull")
     # Log the time of the pull
     if time.time() - last_log > time_between_logs:
