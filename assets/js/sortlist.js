@@ -28,6 +28,5 @@ function refreshTable() {
         }
     );
 
-    $('#holderTable2').load('/admin/getTable2.php', function() { setTimeout(refreshTable, 10000); });
     $('#holderTable2').load('/admin/getTable2.php', function() { /*setTimeout(refreshTable, 10000);*/ });
 }
