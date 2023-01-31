@@ -39,8 +39,9 @@ while True:
     if time.time() - last_log > time_between_logs:
         last_log = time.time()
         print("Auto git pull at " + str(datetime.datetime.now()) + "") if (DEBUG) else None
-        with open(log_path, "a") as f:
-            f.write("Auto git pull at " + str(datetime.datetime.now()) + "")
+        
+        #with open(log_path, "a") as f:
+        #    f.write("Auto git pull at " + str(datetime.datetime.now()) + "")
             
             
 
