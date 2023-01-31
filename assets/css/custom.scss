@@ -1,6 +1,7 @@
 /**/
 
-$theme-colors: ( "primary": #0074d9, "danger": #ff4136);
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+@import url("colorscheme.scss");
 body {
     background: url('/assets/images/elektriker-bg_001.jpg') no-repeat center center fixed;
     background-size: cover;
