@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
 @import url("colorscheme.scss");
+@import url('mobile.scss');
+
+/**/
+
 body {
     background: url('/assets/images/elektriker-bg_001.jpg') no-repeat center center fixed;
     background-size: cover;
