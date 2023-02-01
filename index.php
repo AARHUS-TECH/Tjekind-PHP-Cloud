@@ -1,5 +1,5 @@
 <?php
-header("Location: /admin/index.php");
+header("Location: /admin/");
 //exit();
 require_once('core/init.php');
 
