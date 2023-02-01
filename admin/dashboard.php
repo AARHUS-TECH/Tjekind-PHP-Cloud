@@ -63,10 +63,144 @@ else if(isset($_REQUEST['status']) == 1)
 		<div class="container-fluid dashboard-mobile">
 			<div class="row">
 				<div class="col">
+					<?php echo Errors::getErrorMessage('admin_error'); ?>
+					<?php echo Errors::getSuccessMessage('admin_success'); ?>
+
+					<div class="accordion" id="accordionPanelsStayOpenExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+								Aktive Elever
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+								<div class="accordion-body">
+								<center>
+								<div id="statusFilterHalvSkaerm" style="display: inline-flex; padding-top: 5px; padding-bottom: 10px;">
+									<div id="filterbullet" onclick="flipfilter('all');" style="color: white;">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
+											<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
+										</svg>
+									</div>
+
+									<div id="filterbullet" onclick="flipfilter('Tjekket ind');" style="color: green; display: inline-block;">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
+											<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
+										</svg>
+									</div>
+
+									<div id="filterbullet" onclick="flipfilter('Forsinket');" style="color: orange; display: inline-block;">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
+											<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
+										</svg>
+									</div>
+
+									<div id="filterbullet" onclick="flipfilter('Tjekket ud');" style="color: red; display: inline-block;">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
+											<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
+										</svg>
+									</div>
+								</div>
+								</center>
+								<table id="elevTable" class="table table-hover" unselectable="on" onselectstart="return false">
+								<thead class="dashboard-mobile">
+									<tr>
+										<th style="width: 30%;">Navn&nbsp;
+											<a id="namesort" role="button" onclick="sort='fornavn';sortDir();">
+												<svg id="name_asc" aria-hidden="false" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10" style="display: inline-block; width: 13px; margin: 0px; padding: 0px; vertical-align: middle; margin-left: 5px;">
+													<path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" class=""></path>
+												</svg>
+												<svg id="name_desc" aria-hidden="true" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-down fa-w-10" style="display: none; width: 13px;margin: 0px;padding: 0px;vertical-align: middle;margin-left: 5px;">
+													<path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" class=""></path>
+												</svg>
+											</a>
+										</th>
+										<th style="width: 20%; white-space: nowrap;">Seneste indtjekning&nbsp;
+											<a id="datesort" role="button" onclick="sort='tjekind_timestamp';sortDir();">
+												<svg id="date_asc" aria-hidden="true" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10" style="display: inline-block;width: 13px;margin: 0px;padding: 0px;vertical-align: middle;margin-left: 5px;">
+													<path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" class=""></path>
+												</svg>
+												<svg id="date_desc" aria-hidden="true" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-down fa-w-10" style="display: none; width: 13px;margin: 0px;padding: 0px;vertical-align: middle;margin-left: 5px;">
+													<path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" class=""></path>
+												</svg>											
+											</a>
+										</th>
+										<th id='statusFuldSkaerm' style="width: 18%; vertical-align: top;">
+											<div style="display: inline-block">
+												<div style="display: inline-flex;">Status</div>
+												<div style="display: inline-flex; padding-top: 3px;">
+													<div id="filterbullet" onclick="flipfilter('all');" style="color: white;">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
+															<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
+														</svg>
+													</div>
+													
+													<div id="filterbullet" onclick="flipfilter('Tjekket ind');" style="color: green; display: inline-block;">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
+															<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
+														</svg>
+													</div>
+
+													<div id="filterbullet" onclick="flipfilter('Forsinket');" style="color: orange; display: inline-block;">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
+															<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
+														</svg>
+													</div>
+
+													<div id="filterbullet" onclick="flipfilter('Tjekket ud');" style="color: red; display: inline-block;">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
+															<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
+														</svg>
+													</div>
+												</div>
+											</div>
+
+											<form><input id="filterText" name="filter" onchange='filterText()' type="hidden" value='all'></form>
+										</th>
+										<th class="bmning" style="width: 20%; padding-bottom: 14px;">Bemærkning
+											<a id="question-filter" role="button">
+												<img src="/assets/images/41443-200.png" style="width: 18px; height: 18px;" />
+											</a>
+										</th>
+										<th style="width: 12%; padding-bottom: 14px; text-align: left; padding-left: 0px;">Handlinger</th>
+									</tr>
+								</thead>
+								<tbody id="holderTable">
+									
+								</tbody>
+								</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+							Accordion Item #2
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+							<div class="accordion-body">
+							<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+							</div>
+						</div>
+						</div>
+						<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+							Accordion Item #3
+							</button>
+						</h2>
+						</div>
+						</div>
+
+
+
+
+
+
 					<div class="card card-default">
 
-						<?php echo Errors::getErrorMessage('admin_error'); ?>
-						<?php echo Errors::getSuccessMessage('admin_success'); ?>
 
 						<nav class="navbar navbar-expand-lg navbar-light bg-light">
 							<a class="navbar-brand" href="#">Oversigt - Instruktør</a>
@@ -91,8 +225,12 @@ else if(isset($_REQUEST['status']) == 1)
 							</div>
 						</nav>
 
+
+
+
+
 						<div id="splash" class="card-body">
-							<!-- Modal vindue for at tjekke kort data -->
+							<!-- region Modalvindue #for at tjekke kort data -->
 							<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 								<div class="modal-dialog modal-dialog-centered" role="document">
 									<div class="modal-content">
@@ -162,158 +300,18 @@ else if(isset($_REQUEST['status']) == 1)
 								document.getElementById('inputCardData').value='';
 							}
 							</script>
-							<!-- end: Modal vindue -->
+							<!-- endregion: Modalvindue -->
 
-							<div class="row">
-								<div class="col">
-									<div class="collapse multi-collapse" id="multiCollapseInstructor">
-										<div class="card card-body">
-											<h4 class="text-center" style="font-weight: bold;">Instruktører&nbsp;
-												<a 
-													id="eye_close" 
-													data-toggle="collapse" 
-													href="#multiCollapseInstructor" 
-													role="button" 
-													aria-expanded="false" 
-													aria-controls="multiCollapseExample1"
-												>
-												<svg style="height: 20px;width: 20px;color: #EBEBEB;margin-bottom: -3px;" aria-hidden="true" data-prefix="far" data-icon="eye-slash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-eye-slash fa-w-18">
-													<path fill="currentColor" d="M272.702 359.139c-80.483-9.011-136.212-86.886-116.93-167.042l116.93 167.042zM288 392c-102.556 0-192.092-54.701-240-136 21.755-36.917 52.1-68.342 88.344-91.658l-27.541-39.343C67.001 152.234 31.921 188.741 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.004 376.006 168.14 440 288 440a332.89 332.89 0 0 0 39.648-2.367l-32.021-45.744A284.16 284.16 0 0 1 288 392zm281.354-111.631c-33.232 56.394-83.421 101.742-143.554 129.492l48.116 68.74c3.801 5.429 2.48 12.912-2.949 16.712L450.23 509.83c-5.429 3.801-12.912 2.48-16.712-2.949L102.084 33.399c-3.801-5.429-2.48-12.912 2.949-16.712L125.77 2.17c5.429-3.801 12.912-2.48 16.712 2.949l55.526 79.325C226.612 76.343 256.808 72 288 72c119.86 0 224.996 63.994 281.354 159.631a48.002 48.002 0 0 1 0 48.738zM528 256c-44.157-74.933-123.677-127.27-216.162-135.007C302.042 131.078 296 144.83 296 160c0 30.928 25.072 56 56 56s56-25.072 56-56l-.001-.042c30.632 57.277 16.739 130.26-36.928 171.719l26.695 38.135C452.626 346.551 498.308 306.386 528 256z" class=""></path>		
-												</svg>
-												</a>
-											</h4>
-											<table class="table table-striped table-hover ">
-											<thead>
-												<tr>
-													<th>Navn</th>
-													<th>Brugernavn</th>
-													<th>Handling</th>
-												</tr>
-											</thead>
-											<tbody>
-												<?php
-													$data = $user->getAllInstruktoerer();
-													
-													foreach($data as $row) {
-														echo '<tr>';
-														echo '<td>' . $row->fornavn . ' ' . $row->efternavn . '</td>';
-														echo '<td>' . $row->brugernavn . '</td>';
-														echo '<td><a class="btn btn-outline-white" href="/admin/redigerInstruktoer.php?id=' . $row->userID . '&y='.$y.'&filter='.$filter.'">Rediger</a></td>';
-														echo '</tr>';
-													}
-												?>
-												</tr>
-												<tr>
-													<td colspan=3 style="text-align: center"><a class="btn btn-success" href="opretInstruktoer.php?y=<?php echo $y.'&filter='.$filter; ?>" type="button" class="btn btn-secondary">Opret instruktør</a></td>
-												</tr>
-											</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-							<br />
 							<div class="row">
 							<div class="col">
+								<!-- Original table -->
+
 							<div class="card card-body">
-							<h4 class="text-center" style="font-weight: bold;">Aktive Elever</h4>
-							<center>
-								<div id="statusFilterHalvSkaerm" style="display: inline-flex; padding-top: 5px; padding-bottom: 10px;">
-									<div id="filterbullet" onclick="flipfilter('all');" style="color: white;">
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
-											<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
-										</svg>
-									</div>
 
-									<div id="filterbullet" onclick="flipfilter('Tjekket ind');" style="color: green; display: inline-block;">
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
-											<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
-										</svg>
-									</div>
-									<div id="filterbullet" onclick="flipfilter('Forsinket');" style="color: orange; display: inline-block;">
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
-											<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
-										</svg>
-									</div>
-									<div id="filterbullet" onclick="flipfilter('Tjekket ud');" style="color: red; display: inline-block;">
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
-											<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
-										</svg>
-									</div>
-								</div>
-							</center>
+
 							
 							
-							<table id="elevTable" class="table table-hover" unselectable="on" onselectstart="return false">
-								<thead class="dashboard-mobile">
-									<tr>
-										<th style="width: 30%;">Navn&nbsp;
-											<a id="namesort" role="button" onclick="sort='fornavn';sortDir();">
-											
-											<svg id="name_asc" aria-hidden="false" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10" style="display: inline-block; width: 13px; margin: 0px; padding: 0px; vertical-align: middle; margin-left: 5px;">
-												<path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" class=""></path>
-											</svg>
-											
-											<svg id="name_desc" aria-hidden="true" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-down fa-w-10" style="display: none; width: 13px;margin: 0px;padding: 0px;vertical-align: middle;margin-left: 5px;">
-												<path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" class=""></path>
-											</svg>
-											
-											</a>
-										</th>
-										<th style="width: 20%;">Seneste indtjekning&nbsp;
-											<a id="datesort" role="button" onclick="sort='tjekind_timestamp';sortDir();">
-											
-											<svg id="date_asc" aria-hidden="true" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10" style="display: inline-block;width: 13px;margin: 0px;padding: 0px;vertical-align: middle;margin-left: 5px;">
-												<path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" class=""></path>
-											</svg>
 
-											<svg id="date_desc" aria-hidden="true" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-down fa-w-10" style="display: none; width: 13px;margin: 0px;padding: 0px;vertical-align: middle;margin-left: 5px;">
-												<path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" class=""></path>
-											</svg>											
-												
-											</a>
-										</th>
-										<th id='statusFuldSkaerm' style="width: 18%; vertical-align: top;">
-											<div style="display: inline-block">
-												<div style="display: inline-flex;">Status</div>
-												<div style="display: inline-flex; padding-top: 3px;">
-													<div id="filterbullet" onclick="flipfilter('all');" style="color: white;">
-														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
-															<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
-														</svg>
-													</div>
-													
-													<div id="filterbullet" onclick="flipfilter('Tjekket ind');" style="color: green; display: inline-block;">
-														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
-															<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
-														</svg>
-													</div>
-													<div id="filterbullet" onclick="flipfilter('Forsinket');" style="color: orange; display: inline-block;">
-														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
-															<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
-														</svg>
-													</div>
-													<div id="filterbullet" onclick="flipfilter('Tjekket ud');" style="color: red; display: inline-block;">
-														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
-															<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
-														</svg>
-													</div>
-												</div>
-											</div>
-											<form><input id="filterText" name="filter" onchange='filterText()' type="hidden" value='all'></form>
-										</th>
-										<th class="bmning" style="width: 20%; padding-bottom: 14px;">Bemærkning
-											<a id="question-filter" role="button">
-												<img src="/assets/images/41443-200.png" style="width: 18px; height: 18px;" />
-											</a>
-										</th>
-										<th style="width: 12%; padding-bottom: 14px; text-align: left; padding-left: 0px;">Handlinger</th>
-									</tr>
-								</thead>
-								<tbody id="holderTable">
-									
-								</tbody>
-							</table>
 							</div>
 							</div>
 							</div>
