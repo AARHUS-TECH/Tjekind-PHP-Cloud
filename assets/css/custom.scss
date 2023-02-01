@@ -9,6 +9,22 @@
 body {
     background: url('/assets/images/elektriker-bg_002.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-color: darkslategray
+}
+
+.accordion-header {
+    margin-bottom: 0;
+}
+
+.accordion-item {
+    color: var(--bs-accordion-color);
+    background-color: var(--bs-gray-800);
+    border: 2px solid darkslategray;
+}
+
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity))!important;
 }
 
 .card {
