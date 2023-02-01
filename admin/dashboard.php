@@ -281,8 +281,8 @@ else if(isset($_REQUEST['status']) == 1)
 			</div>
 
 			<script>
-			var myModal = document.getElementById('myModal')
-			var myInput = document.getElementById('myInput')
+			var myModal = document.getElementById('exampleModal')
+			var myInput = document.getElementById('inputCardData')
 
 			myModal.addEventListener('shown.bs.modal', function () {
 				myInput.focus();
