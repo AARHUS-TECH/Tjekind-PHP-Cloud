@@ -133,8 +133,8 @@ td {
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
 }
 
-.form-control#brugernavn {
-    background-color: #222222;
+.form-control#brugernavn,
+.form-control#adgangskode {
     border: 1px solid #000000;
-    color: whitesmoke;
+    margin-bottom: 15px;
 }
