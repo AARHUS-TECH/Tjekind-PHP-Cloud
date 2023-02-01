@@ -72,16 +72,15 @@ else if(isset($_REQUEST['status']) == 1)
 							<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 								<div class="navbar-nav">
 									<a class="nav-item nav-link active" href="#">Forsiden <span class="sr-only">(current)</span></a>
+									<a class="nav-item nav-link disabled" href="profile.php">Profile</a>
 									<a class="nav-item nav-link" href="opretElev.php?y=<?php echo $y.'&filter='.$filter; ?>">Opret elev</a>
-									<a class="nav-item nav-link disabled" href="#multiCollapseInactiveStudents" aria-controls="multiCollapseExample1" id="inactivebtn">Vis inaktive</a>
-									<a id="instructor" class="nav-item nav-link disabled" href="#multiCollapseInstructor"data-toggle="collapse"  aria-expanded="false" aria-controls="multiCollapseExample1">Vis instruktør</a>
 									<!-- begin: Knap som trigger modal vindue til input for kort data
 									HTML koden til modal vindue findes længere nede efterfulgt
 									af JavaScript koden. Benytter ajaxResponse.php og
 									funtionen ajaxGetData($cardnumber) i User.php -->
 									<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Tjek kort</a>
 									<!-- end: -->
-									<a class="btn btn-successbtn-secondary" href="logout.php" type="button" style="margin-top: 15px;">Log ud</a>
+									<a class="btn btn-success" href="logout.php" type="button" style="margin-top: 15px;">Log ud</a>
 								</div>
 							</div>
 						</div>
@@ -236,14 +235,12 @@ else if(isset($_REQUEST['status']) == 1)
 			</div>
 
 			<!-- region Modalvindue #for at tjekke kort data -->
-			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLongTitle">Skan kortet</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-							</button>
+							<h5 class="modal-title" id="exampleModalLabel">Skan kortet</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
 
 						<div class="modal-body">
@@ -267,20 +264,27 @@ else if(isset($_REQUEST['status']) == 1)
 							<button 
 								type="button" 
 								class="btn btn-secondary" 
-								data-dismiss="modal"
+								data-bs-dismiss="modal" 
 								onclick="document.getElementById('inputCardData').value='';document.getElementById('cardDataHelp').innerHTML='Ingen kortdata';"
 								>Luk</button>
-							<button 
-								type="submit" 
-								class="btn btn-primary"
+ 							<button 
+								type="button" 
+								class="btn btn-primary" 
 								onclick="(document.getElementById('inputCardData').value != '')?showCardData():'';"
-							>Tjek kort</button>
+								>Tjek kort</button>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<script>
+			var myModal = document.getElementById('myModal')
+			var myInput = document.getElementById('myInput')
+
+			myModal.addEventListener('shown.bs.modal', function () {
+				myInput.focus();
+			});
+
 			function showCardData() {
 				var str = document.getElementById('inputCardData').value;
 				console.log(str);
