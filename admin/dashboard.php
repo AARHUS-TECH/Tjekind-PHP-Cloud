@@ -231,9 +231,9 @@ else if(isset($_REQUEST['status']) == 1)
 
 			<div class="row">
 				<div class="col">
-					<center>
+					<div class="app-footer" style="text-align: center">
 						<p class="text-center">&copy; Aarhus Tech SKP <?php echo date('Y'); ?><br/>Udviklet af elever og instruktører SKP Data IT</p>
-					</center>
+					</div>
 				</div>
 			</div>
 
