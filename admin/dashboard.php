@@ -74,19 +74,16 @@ else if(isset($_REQUEST['status']) == 1)
 									<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
 									<!-- a class="nav-link active" aria-current="page" href="#">Home</!-->
 									<a class="nav-item nav-link" href="opretElev.php?y=<?php echo $y.'&filter='.$filter; ?>">Opret elev</a>
-									<!-- a class="nav-link" href="#">Features</!-->
 									<a class="nav-item nav-link disabled" href="#multiCollapseInactiveStudents" aria-controls="multiCollapseExample1" id="inactivebtn">Vis inaktive</a>
-									<!-- a class="nav-link" href="#">Pricing</!-->
-									<a class="btn btn-success" href="logout.php" type="button" class="btn btn-secondary">Log ud</a>
 									<!-- begin: Knap som trigger modal vindue til input for kort data
-									 HTML koden til modal vindue findes længere nede efterfulgt
-									 af JavaScript koden. Benytter ajaxResponse.php og
-									 funtionen ajaxGetData($cardnumber) i User.php -->
-									<a class="nav-item nav-link disabled" href="#" data-toggle="modal" data-target="#exampleModalCenter">Tjek kort</a>
+									HTML koden til modal vindue findes længere nede efterfulgt
+									af JavaScript koden. Benytter ajaxResponse.php og
+									funtionen ajaxGetData($cardnumber) i User.php -->
 									<!-- a class="nav-link disabled">Disabled</!-->
 									<a id="instructor" class="nav-item nav-link disabled" href="#multiCollapseInstructor"data-toggle="collapse"  aria-expanded="false" aria-controls="multiCollapseExample1">Vis instruktør</a>
+									<a class="nav-item nav-link disabled" href="#" data-toggle="modal" data-target="#exampleModalCenter">Tjek kort</a>
 									<!-- end: -->
-									<a class="nav-item nav-link disabled" href="#">Logud</a>
+									<a class="btn btn-success" href="logout.php" type="button" class="btn btn-secondary">Log ud</a>
 								</div>
 							</div>
 						</div>
