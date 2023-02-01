@@ -17,6 +17,19 @@ body {
     background-color: #576e99 !important;
 }
 
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-brand,
+.nav-link {
+    color: whitesmoke !important;
+}
+
+.nav-link:hover {
+    color: hsl(56, 75%, 49%) !important;
+}
+
 .accordion-header {
     margin-bottom: 0;
 }
