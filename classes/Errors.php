@@ -2,7 +2,12 @@
 
 class Errors {
 
-    public static function getErrorMessage($session) {
+    /**
+     * @param $session
+     * @return false|string
+     */
+    public static function getErrorMessage($session): false|string
+    {
         if(Session::exists($session)) {
             $message  = '<div class="alert alert-dismissible alert-danger">';
             $message .= '<p class="text-center" style="margin-bottom: 0;">' . Session::get($session) . '</p>';
@@ -15,8 +20,13 @@ class Errors {
         return false;
     }
 
-    
-    public static function getSuccessMessage($session) {
+
+    /**
+     * @param $session
+     * @return false|string
+     */
+    public static function getSuccessMessage($session): false|string
+    {
         if(Session::exists($session)) {
             $message  = '<div class="alert alert-dismissible alert-success">';
             $message .= '<p class="text-center" style="margin-bottom: 0;">' . Session::get($session) . '</p>';
@@ -31,4 +41,3 @@ class Errors {
 
 }
 
-?>
