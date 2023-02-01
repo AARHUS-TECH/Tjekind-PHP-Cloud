@@ -78,6 +78,9 @@ else if(isset($_REQUEST['status']) == 1)
 									HTML koden til modal vindue findes længere nede efterfulgt
 									af JavaScript koden. Benytter ajaxResponse.php og
 									funtionen ajaxGetData($cardnumber) i User.php -->
+									<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLive">
+										Launch demo modal
+									</button>
 									<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Tjek kort</a>
 									<!-- end: -->
 									<a class="btn btn-success" href="logout.php" type="button" style="margin-top: 15px;">Log ud</a>
