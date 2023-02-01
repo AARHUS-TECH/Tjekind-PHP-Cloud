@@ -546,7 +546,7 @@
 		public function getStatusClass($value) {
 			switch($value) {
 				case '0':
-					$status = 'table-danger';
+					$status = 'text-bg-danger';
 					break;
 				case '1':
 					$status = 'text-bg-success';
