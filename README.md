@@ -61,7 +61,7 @@ I hope this helps! Let me know if you have any questions.
 
 # Frontend
 
-I´ve dicided to us yarn as pacage manager - i just like it better than npm<br/>
+I´ve dicided to us yarn as package manager - i just like it better than npm<br/>
 Ref: Home | Yarn - Package Manager https://yarnpkg.com
 
 ## Setting up React with typescript
