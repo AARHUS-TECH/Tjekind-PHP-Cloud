@@ -326,61 +326,9 @@ else if(isset($_REQUEST['status']) == 1)
 			var urlinactive;
 
 			$(document).ready(function(){
-				
-				var inactiveElev = "<?php echo isset($_REQUEST['inactiveElev']); ?>";
 				var y=<?php echo isset($_REQUEST['y'])?$_REQUEST['y']:0; ?>;
 				var instruktoerPopUp = "<?php echo isset($_REQUEST['instruktoerPopUp']); ?>";
 
-				if(inactiveElev == 'checked') {
-
-					document.getElementById("inactivebtn").click();
-					var expandTimer = setInterval(myTimer, 500);
-					function myTimer() {
-						window.scrollTo(0, y);
-						clearInterval(expandTimer);
-					}
-				}
-
-				if(instruktoerPopUp == 'ja') { document.getElementById("instructor").click(); }
-				
-				$("#inactivebtn").click(
-					function() {
-						//Set timer to wait for expanding script to end
-						
-						var expandTimer = setInterval(myTimer, 500);
-						
-						function myTimer() {
-							//Use a toggle switch as indicator for expanding script status
-							if ($("#inactivebtn").attr("aria-expanded") == "true") {
-								//Scroll into view when done expanding
-								//document.getElementById("inactive").scrollIntoView(true);
-								document.getElementById("inactive").scrollIntoView({behavior: "instant", block: "start", inline: "nearest"});
-								
-								clearInterval(expandTimer);
-							}
-						}		
-					}
-				);
-				
-				$("#eye_close").click(
-					function(){
-						//Set timer to wait for expanding script to end
-						var expandTimer = setInterval(myTimer, 500);
-
-						function myTimer() {
-							//Use a toggle switch as indicator for expanding script status
-							if ($("#eye_close").attr("aria-expanded") == "false") {
-								//Scroll into view when done expanding
-								document.body.scrollTop = 0; // For Safari
-								document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-								clearInterval(expandTimer);
-								inactiveElev = 'unchecked';
-							}
-						}		
-					}
-				);
-
-		
 				$("#name_asc").click(function(){
 					$("#name_asc").hide();
 					$("#name_desc").show();
