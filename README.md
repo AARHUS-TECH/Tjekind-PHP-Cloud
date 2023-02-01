@@ -1,3 +1,17 @@
+# Tjekind Cloud
+
+Koden er taget fra det oprindelige Tjekind system
+
+Formålet er at opgradere Tjekind for at indhente data fra flere forskellige autonome enheder
+
+
+Opdateret til at understøtte:
+Bootstrap 5.2
+jQuery 3.6.3
+
+# Todo
+- [ ] Handle Regions/ zones
+
 # Tjekind IoT cloudserver and frontend app
 
 As a fun side project i opted to ask tryout ChatGPT
