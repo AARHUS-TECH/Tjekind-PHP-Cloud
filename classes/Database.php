@@ -9,7 +9,15 @@
 
 class Database {
 
-    private $pdo;
+    private PDO $pdo;
+
+    /**
+     * @return PDO
+     */
+    public function getPdo(): PDO
+    {
+        return $this->pdo;
+    }
 
     public function __construct()
     {
@@ -355,6 +363,7 @@ class Database {
         $sel = $this->pdo->prepare("Delete from $table where $where=?" );
         $sel->execute( $data );
     }
+
 }
 
 ?>
