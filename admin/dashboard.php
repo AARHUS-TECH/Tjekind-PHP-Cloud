@@ -78,8 +78,10 @@ else if(isset($_REQUEST['status']) == 1)
 									HTML koden til modal vindue findes længere nede efterfulgt
 									af JavaScript koden. Benytter ajaxResponse.php og
 									funtionen ajaxGetData($cardnumber) i User.php -->
-									<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLive">
-										Launch demo modal
+
+									<!-- Button trigger modal -->
+									<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  										Tjek kort
 									</button>
 									<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Tjek kort</a>
 									<!-- end: -->
@@ -314,18 +316,6 @@ else if(isset($_REQUEST['status']) == 1)
 			</script>
 			<!-- endregion: Modalvindue -->
 		
-			
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-
-
-
-
-
-
-
 		<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>		<script src="/assets/js/dismiss-alerts.js"></script>
