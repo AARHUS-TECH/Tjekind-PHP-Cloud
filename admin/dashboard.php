@@ -133,69 +133,69 @@ else if(isset($_REQUEST['status']) == 1)
 									</center>
 									<table id="elevTable" class="table table-hover" unselectable="on" onselectstart="return false">
 										<thead class="dashboard-mobile">
-										<tr>
-											<th style="width: 30%;">Navn&nbsp;
-												<a id="namesort" role="button" onclick="sort='fornavn';sortDir();">
-													<svg id="name_asc" aria-hidden="false" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10" style="display: inline-block; width: 13px; margin: 0px; padding: 0px; vertical-align: middle; margin-left: 5px;">
-														<path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" class=""></path>
-													</svg>
-													<svg id="name_desc" aria-hidden="true" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-down fa-w-10" style="display: none; width: 13px;margin: 0px;padding: 0px;vertical-align: middle;margin-left: 5px;">
-														<path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" class=""></path>
-													</svg>
-												</a>
-											</th>
-											<th style="width: 20%; white-space: nowrap;">Seneste indtjekning&nbsp;
-												<a id="datesort" role="button" onclick="sort='tjekind_timestamp';sortDir();">
-													<svg id="date_asc" aria-hidden="true" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10" style="display: inline-block;width: 13px;margin: 0px;padding: 0px;vertical-align: middle;margin-left: 5px;">
-														<path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" class=""></path>
-													</svg>
-													<svg id="date_desc" aria-hidden="true" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-down fa-w-10" style="display: none; width: 13px;margin: 0px;padding: 0px;vertical-align: middle;margin-left: 5px;">
-														<path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" class=""></path>
-													</svg>											
-												</a>
-											</th>
-											<th id='statusFuldSkaerm' style="width: 18%; vertical-align: top;">
-												<div style="display: inline-block">
-													<div style="display: inline-flex;">Status</div>
-													<div style="display: inline-flex; padding-top: 3px;">
-														<div id="filterbullet" onclick="flipfilter('all');" style="color: white;">
-															<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
-																<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
-															</svg>
-														</div>
-														
-														<div id="filterbullet" onclick="flipfilter('Tjekket ind');" style="color: green; display: inline-block;">
-															<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
-																<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
-															</svg>
-														</div>
+											<tr>
+												<th style="width: 30%;">Navn&nbsp;
+													<a id="namesort" role="button" onclick="sort='fornavn';sortDir();">
+														<svg id="name_asc" aria-hidden="false" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10" style="display: inline-block; width: 13px; margin: 0px; padding: 0px; vertical-align: middle; margin-left: 5px;">
+															<path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" class=""></path>
+														</svg>
+														<svg id="name_desc" aria-hidden="true" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-down fa-w-10" style="display: none; width: 13px;margin: 0px;padding: 0px;vertical-align: middle;margin-left: 5px;">
+															<path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" class=""></path>
+														</svg>
+													</a>
+												</th>
+												<th style="width: 20%; white-space: nowrap;">Seneste indtjekning&nbsp;
+													<a id="datesort" role="button" onclick="sort='tjekind_timestamp';sortDir();">
+														<svg id="date_asc" aria-hidden="true" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10" style="display: inline-block;width: 13px;margin: 0px;padding: 0px;vertical-align: middle;margin-left: 5px;">
+															<path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" class=""></path>
+														</svg>
+														<svg id="date_desc" aria-hidden="true" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-down fa-w-10" style="display: none; width: 13px;margin: 0px;padding: 0px;vertical-align: middle;margin-left: 5px;">
+															<path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" class=""></path>
+														</svg>											
+													</a>
+												</th>
+												<th id='statusFuldSkaerm' style="width: 18%; vertical-align: top;">
+													<div style="display: inline-block">
+														<div style="display: inline-flex;">Status</div>
+														<div style="display: inline-flex; padding-top: 3px;">
+															<div id="filterbullet" onclick="flipfilter('all');" style="color: white;">
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
+																	<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
+																</svg>
+															</div>
+															
+															<div id="filterbullet" onclick="flipfilter('Tjekket ind');" style="color: green; display: inline-block;">
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
+																	<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
+																</svg>
+															</div>
 
-														<div id="filterbullet" onclick="flipfilter('Forsinket');" style="color: orange; display: inline-block;">
-															<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
-																<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
-															</svg>
-														</div>
+															<div id="filterbullet" onclick="flipfilter('Forsinket');" style="color: orange; display: inline-block;">
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
+																	<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
+																</svg>
+															</div>
 
-														<div id="filterbullet" onclick="flipfilter('Tjekket ud');" style="color: red; display: inline-block;">
-															<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
-																<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
-															</svg>
+															<div id="filterbullet" onclick="flipfilter('Tjekket ud');" style="color: red; display: inline-block;">
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
+																	<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/>
+																</svg>
+															</div>
 														</div>
 													</div>
-												</div>
 
-												<form><input id="filterText" name="filter" onchange='filterText()' type="hidden" value='all'></form>
-											</th>
-											<th class="bmning" style="width: 20%; padding-bottom: 14px;">Bemærkning
-												<a id="question-filter" role="button">
-													<img src="/assets/images/41443-200.png" style="width: 18px; height: 18px;" />
-												</a>
-											</th>
-											<th style="width: 12%; padding-bottom: 14px; text-align: left; padding-left: 0px;">Handlinger</th>
-										</tr>
-									</thead>
+													<form><input id="filterText" name="filter" onchange='filterText()' type="hidden" value='all'></form>
+												</th>
+												<th class="bmning" style="width: 20%; padding-bottom: 14px;">Bemærkning
+													<a id="question-filter" role="button">
+														<img src="/assets/images/41443-200.png" style="width: 18px; height: 18px;" />
+													</a>
+												</th>
+												<th style="width: 12%; padding-bottom: 14px; text-align: left; padding-left: 0px;">Handlinger</th>
+											</tr>
+										</thead>
 										<tbody id="holderTable">
-									</tbody>
+										</tbody>
 									</table>
 								</div>
 							</div>
@@ -225,91 +225,89 @@ else if(isset($_REQUEST['status']) == 1)
 								</div>
 							</div>
 						</div>
-
 					</div>
+				</div>
+			</div>
 
+			<div class="row">
+				<div class="col">
+					<center>
+						<p class="text-center">&copy; Aarhus Tech SKP <?php echo date('Y'); ?><br/>Udviklet af elever og instruktører SKP Data IT</p>
+					</center>
+				</div>
+			</div>
 
-					<!-- region Modalvindue #for at tjekke kort data -->
-					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLongTitle">Skan kortet</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
+			<!-- region Modalvindue #for at tjekke kort data -->
+			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Skan kortet</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
 
-								<div class="modal-body">
-									<div class="form-group">
-										<input 
-											type="password" 
-											class="form-control" 
-											id="inputCardData" 
-											aria-describedby="emailHelp" 
-											placeholder="Kort data"
-											value=""						
-										>
-										<div 
-											id="cardDataHelp" 
-											class="form-text"
-										>Ingen kortdata</div>
-									</div>
-								</div>
-
-								<div class="modal-footer">
-									<button 
-										type="button" 
-										class="btn btn-secondary" 
-										data-dismiss="modal"
-										onclick="document.getElementById('inputCardData').value='';document.getElementById('cardDataHelp').innerHTML='Ingen kortdata';"
-										>Luk</button>
-									<button 
-										type="submit" 
-										class="btn btn-primary"
-										onclick="(document.getElementById('inputCardData').value != '')?showCardData():'';"
-									>Tjek kort</button>
-								</div>
+						<div class="modal-body">
+							<div class="form-group">
+								<input 
+									type="password" 
+									class="form-control" 
+									id="inputCardData" 
+									aria-describedby="emailHelp" 
+									placeholder="Kort data"
+									value=""						
+								>
+								<div 
+									id="cardDataHelp" 
+									class="form-text"
+								>Ingen kortdata</div>
 							</div>
 						</div>
-					</div>
 
-					<script>
-					function showCardData() {
-						var str = document.getElementById('inputCardData').value;
-						console.log(str);
-
-						if (str.length == 0) {
-							document.getElementById("cardDataHelp").innerHTML = "Input feltet er tomt - indgiv kortkode";
-							return;
-						} else {
-							document.getElementById("cardDataHelp").innerHTML = "Tjekker kortet op mod databasen";
-
-							const xmlhttp = new XMLHttpRequest();
-							xmlhttp.onload = function() {
-								msg = this.responseText;
-								console.log(msg);
-								document.getElementById("cardDataHelp").innerHTML = this.responseText;
-							}
-
-							xmlhttp.open("GET", "/admin/ajaxResponse.php?card=" + str);
-							xmlhttp.send();
-						}
-
-						document.getElementById('inputCardData').value='';
-					}
-					</script>
-					<!-- endregion: Modalvindue -->
-
-							<br />
-							<center>
-								<p class="text-center">&copy; Aarhus Tech SKP <?php echo date('Y'); ?><br/>Udviklet af elever og instruktører SKP Data IT</p>
-							</center>
+						<div class="modal-footer">
+							<button 
+								type="button" 
+								class="btn btn-secondary" 
+								data-dismiss="modal"
+								onclick="document.getElementById('inputCardData').value='';document.getElementById('cardDataHelp').innerHTML='Ingen kortdata';"
+								>Luk</button>
+							<button 
+								type="submit" 
+								class="btn btn-primary"
+								onclick="(document.getElementById('inputCardData').value != '')?showCardData():'';"
+							>Tjek kort</button>
 						</div>
 					</div>
+				</div>
+			</div>
 
+			<script>
+			function showCardData() {
+				var str = document.getElementById('inputCardData').value;
+				console.log(str);
 
-		</div>
+				if (str.length == 0) {
+					document.getElementById("cardDataHelp").innerHTML = "Input feltet er tomt - indgiv kortkode";
+					return;
+				} else {
+					document.getElementById("cardDataHelp").innerHTML = "Tjekker kortet op mod databasen";
+
+					const xmlhttp = new XMLHttpRequest();
+					xmlhttp.onload = function() {
+						msg = this.responseText;
+						console.log(msg);
+						document.getElementById("cardDataHelp").innerHTML = this.responseText;
+					}
+
+					xmlhttp.open("GET", "/admin/ajaxResponse.php?card=" + str);
+					xmlhttp.send();
+				}
+
+				document.getElementById('inputCardData').value='';
+			}
+			</script>
+			<!-- endregion: Modalvindue -->
 				
 		<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
