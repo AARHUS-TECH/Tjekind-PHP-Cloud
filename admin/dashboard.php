@@ -83,7 +83,8 @@ else if(isset($_REQUEST['status']) == 1)
 									<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   										Tjek kort
 									</button>
-									<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Tjek kort</a>
+
+									<a class="nav-item nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Tjek kort</a>
 									<!-- end: -->
 									<a class="btn btn-success" href="logout.php" type="button" style="margin-top: 15px;">Log ud</a>
 								</div>
