@@ -71,10 +71,22 @@ else if(isset($_REQUEST['status']) == 1)
 							</button>
 							<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 								<div class="navbar-nav">
-									<a class="nav-link active" aria-current="page" href="#">Home</a>
-									<a class="nav-link" href="#">Features</a>
-									<a class="nav-link" href="#">Pricing</a>
-									<a class="nav-link disabled">Disabled</a>
+									<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+									<!-- a class="nav-link active" aria-current="page" href="#">Home</!-->
+									<a class="nav-item nav-link" href="opretElev.php?y=<?php echo $y.'&filter='.$filter; ?>">Opret elev</a>
+									<!-- a class="nav-link" href="#">Features</!-->
+									<a class="nav-item nav-link disabled" href="#multiCollapseInactiveStudents" aria-controls="multiCollapseExample1" id="inactivebtn">Vis inaktive</a>
+									<!-- a class="nav-link" href="#">Pricing</!-->
+									<a class="btn btn-success" href="logout.php" type="button" class="btn btn-secondary">Log ud</a>
+									<!-- begin: Knap som trigger modal vindue til input for kort data
+									 HTML koden til modal vindue findes længere nede efterfulgt
+									 af JavaScript koden. Benytter ajaxResponse.php og
+									 funtionen ajaxGetData($cardnumber) i User.php -->
+									<a class="nav-item nav-link disabled" href="#" data-toggle="modal" data-target="#exampleModalCenter">Tjek kort</a>
+									<!-- a class="nav-link disabled">Disabled</!-->
+									<a id="instructor" class="nav-item nav-link disabled" href="#multiCollapseInstructor"data-toggle="collapse"  aria-expanded="false" aria-controls="multiCollapseExample1">Vis instruktør</a>
+									<!-- end: -->
+									<a class="nav-item nav-link disabled" href="#">Logud</a>
 								</div>
 							</div>
 						</div>
@@ -193,17 +205,19 @@ else if(isset($_REQUEST['status']) == 1)
 						</div>
 
 						<div class="accordion-item">
-						<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-							Accordion Item #2
-							</button>
-						</h2>
-						<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-							<div class="accordion-body">
-							<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+							<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+									Inaktive elever
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+								<div class="accordion-body">
+									
+								<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+								</div>
 							</div>
 						</div>
-						</div>
+
 						<div class="accordion-item">
 						<h2 class="accordion-header" id="panelsStayOpen-headingThree">
 							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
@@ -221,28 +235,8 @@ else if(isset($_REQUEST['status']) == 1)
 					<div class="card card-default">
 
 
-						<nav class="navbar navbar-expand-lg navbar-light bg-light">
-							<a class="navbar-brand" href="#">Oversigt - Instruktør</a>
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-							</button>
-							<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-								<div class="navbar-nav">
-									<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-									<a class="nav-item nav-link" href="opretElev.php?y=<?php echo $y.'&filter='.$filter; ?>">Opret elev</a>
-									<a class="nav-item nav-link disabled" href="#multiCollapseInactiveStudents" aria-controls="multiCollapseExample1" id="inactivebtn">Vis inaktive</a>
-									<a id="instructor" class="nav-item nav-link disabled" href="#multiCollapseInstructor"data-toggle="collapse"  aria-expanded="false" aria-controls="multiCollapseExample1">Vis instruktør</a>
-									<a class="btn btn-success" href="logout.php" type="button" class="btn btn-secondary">Log ud</a>
-									<!-- begin: Knap som trigger modal vindue til input for kort data
-									 HTML koden til modal vindue findes længere nede efterfulgt
-									 af JavaScript koden. Benytter ajaxResponse.php og
-									 funtionen ajaxGetData($cardnumber) i User.php -->
-									<a class="nav-item nav-link disabled" href="#" data-toggle="modal" data-target="#exampleModalCenter">Tjek kort</a>
-									<!-- end: -->
-									<a class="nav-item nav-link disabled" href="#">Logud</a>
-								</div>
-							</div>
-						</nav>
+
+
 
 
 
@@ -321,29 +315,6 @@ else if(isset($_REQUEST['status']) == 1)
 							</script>
 							<!-- endregion: Modalvindue -->
 
-							<div class="row">
-							<div class="col">
-								<!-- Original table -->
-
-							<div class="card card-body">
-
-
-							
-							
-
-							</div>
-							</div>
-							</div>
-								<div id="inactive"></div>
-								<div class="row">
-									<div class="col">
-										<div class="collapse multi-collapse" id="multiCollapseInactiveStudents">
-											<div class="card card-body">
-
-								</div>
-								</div>
-								</div>
-							</div>
 							<br />
 							<center>
 								<p class="text-center">&copy; Aarhus Tech SKP <?php echo date('Y'); ?><br/>Udviklet af elever og instruktører SKP Data IT</p>
