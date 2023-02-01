@@ -1,6 +1,6 @@
 <?php
-header("Location: /admin/index.php");
-exit();
+//header("Location: /admin/index.php");
+//exit();
 require_once('core/init.php');
 
 $user = new User();
