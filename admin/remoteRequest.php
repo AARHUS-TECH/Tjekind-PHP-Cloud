@@ -38,7 +38,7 @@ $response = array();
 // Ex. GET url to the API
 // https://cloud.ats-skpdatait.dk/insert-student.php?userID=2&groupID=0&fornavn=er&efternavn=erer&status=status&tjekind_timestamp=89r8t&iSKP=1&bemning=Syg
 
-if ( $userID && $groupID && $fornavn && $efternavn && $status && $tjekind_timestamp && $iSKP && $bemning ) 
+if ( $userID)// && $groupID && $fornavn && $efternavn && $status && $tjekind_timestamp && $iSKP && $bemning  
 {
 	if ( RemoteAccess::checkToken($token) ) {
 		// Token is valid
