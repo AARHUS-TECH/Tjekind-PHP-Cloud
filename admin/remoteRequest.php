@@ -18,7 +18,7 @@ require_once('../config/init.php');
 
 $remote = new RemoteAccess;
 $user   = new User;
-exit();
+
 // Getting all the http vars or set empty string
 $userID            = ( isset($_REQUEST['userID']) )           ?trim( $_REQUEST['userID']    )        :'';
 $groupID           = ( isset($_REQUEST['groupID']) )          ?trim( $_REQUEST['groupID']   )        :'';
