@@ -45,7 +45,11 @@ project-root/
 
 ```
 
+## Remote request fra Tjekind systemer
+Kørsel af request forudsætter adgang til internettet
 
+Filen tilgåes
+  https://cloud.ats-skpdatait.dk/admin/remoteRequest.php
 
 
 
