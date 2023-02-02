@@ -40,7 +40,13 @@ if ( isset($_REQUEST['userID']) ) {
 	$bemning           = ( isset($_REQUEST['bemning']) )          ?trim( $_REQUEST['bemning']   )        :NULL; // enum 'Syg','Ekstern Opgave','Job Samtale','Forsinket','Ikke Godkendt','Andet','Datastue','Ulovlig fravær','Ferie / Fridag','?','Corona'
 	$action			   = ( isset($_REQUEST['action']) )           ?trim( $_REQUEST['action']    )        :NULL;
 	$token             = ( isset($_REQUEST['token']) )            ?trim( urldecode( $_REQUEST['token'] )):NULL; echo ($action == "debug")?"\$token = $token\n\r":"";
-    
+
+	if ( RemoteAccess::checkToken($token) ) {
+		$response["success"] = 1;
+	} else {
+		$response["success"] = 0;
+	} 
+
     // Include data base connect class
     $filepath = realpath (dirname(__FILE__));
 	require_once($filepath."/config/dbconnect.php");
