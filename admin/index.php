@@ -5,7 +5,7 @@ $user = new User();
 $user->auth();
 
 ?><!DOCTYPE html>
-<html>
+<html lang="da">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +50,7 @@ $user->auth();
                         <h3 class="text-center" id="clock">&nbsp;</h3>
                         <h4 class="text-center">INSTRUKTØR DASHBOARD</h4>
                         <br />
-                        <center>
+                        <div style="text-align: center;">
                             <form method="post" name="bruger-login-form" action="/" onsubmit="return validateFormBruger()">
                                 <div id="brugernavn-form-group" class="form-group">
                                     <input type="text" id="brugernavn" class="form-control" name="brugernavn" placeholder="Brugernavn" autocomplete="off" autofocus>
@@ -60,9 +60,9 @@ $user->auth();
                                 </div>
                                 <button id="login" type="submit" class="btn btn-outline-success" style="width: 100%;">Log ind</button>
                             </form>
-                        </center>
+                        </div>
                         <br />
-                        <center><p class="text-center">&copy; Aarhus Tech SKP <?php echo date('Y'); ?><br/>Udviklet af elever og instruktører SKP Data IT</p></center>
+                        <div style="text-align: center;"><p class="text-center">&copy; Aarhus Tech SKP <?php echo date('Y'); ?><br/>Udviklet af elever og instruktører SKP Data IT</p></div>
                     </div>
                 </div>
             </div>
