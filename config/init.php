@@ -31,6 +31,15 @@ $GLOBALS['config'] = array(
     'info' => array(
         'tjekind_pc_ip' => '::1'
     ),
+    $ip_whitelist => array(
+        '10.254.254.25'
+    ),
+    'token_whitelist' => array(
+        'krs' => "cj>!pQLMseLRx}oqM/8'3Q~{nP(R;W", 
+        'umf' => "VtI0mwKqd.hj(ws%HQzm|q(qIn-uHt",
+        'sas' => "X.#h9h87/J*{1`d5LaV@SMH/g?*BBc",
+        'reserve' => "3Lw~7|Xw8'qq#xQ?AQZ+L85x3Ko|&0",
+    ),
     'token-terminal' => array(
         '5f51a4a917841eb4210b2c97979886d1cdcc1ece77e0bc1a2d49579449baf019',
         'f2b5407138b561103f17efc76117961ebb5673face973b573341bd50840011eb',
@@ -42,11 +51,6 @@ $GLOBALS['config'] = array(
         'd8ce464525b69c35f72e37407976ddbc4e42debadbc3c56eedd6bf4492ad0fe5',
         '8218e6b61fdb2f6e48de118502b014c7bb6aff83a9cfacbdf436e9b7f53209f5',
         '17a59e2dbdac1ee974ae1424f68baf67615a95ebf743ffc739e3a05d38d06b64',
-    ),
-    'token-webunits'=>array(        
-        'krs' => '',
-        'sas' => '',
-        'umf' => '',
     ),
 );
 
