@@ -43,7 +43,11 @@ $GLOBALS['config'] = array(
         '8218e6b61fdb2f6e48de118502b014c7bb6aff83a9cfacbdf436e9b7f53209f5',
         '17a59e2dbdac1ee974ae1424f68baf67615a95ebf743ffc739e3a05d38d06b64',
     ),
-    'token-webunits'=>array(),
+    'token-webunits'=>array(        
+        'krs' => '',
+        'sas' => '',
+        'umf' => '',
+    ),
 );
 
 spl_autoload_register(function($class) {
