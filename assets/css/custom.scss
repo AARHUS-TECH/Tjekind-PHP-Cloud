@@ -61,6 +61,12 @@ body {
     font-family: Arial;
 }
 
+.table th,
+.table td {
+    border-top: 1px solid #000000 !important;
+    vertical-align: middle;
+}
+
 .table-striped {
     border: 1px solid #000000;
 }
@@ -82,18 +88,13 @@ body {
     background-color: #141414;
 }
 
-.table>thead>tr>th {
-    background-color: #111111;
-}
-
-.table th,
-.table td {
-    border-top: 1px solid #000000 !important;
-    vertical-align: middle;
-}
-
 .table thead th {
     border-bottom: 2px solid #000000 !important;
+}
+
+.table>thead>tr>th {
+    background-color: #111111;
+    color: whitesmoke;
 }
 
 .vcenter {
