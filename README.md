@@ -68,7 +68,7 @@ Frontend: remoteRequest.php8
 | $status            | Status: enum '0', '1', '2'                              |
 | $tjekind_timestamp | MySQL current_timestamp()                               |
 | $iSKP              | iSKP enum '0', '1'                                      |
-| $bemning           | Årsag til fravær:<br />'Syg', 'Ekstern Opgave',<br />'Job Samtale', 'Forsinket',<br />'Ikke Godkendt', 'Andet',<br />'Datastue',<br />'Ulovlig fravær',<br />'Ferie / Fridag',<br />'?', 'Corona' |
+| $bemning           | Årsag til fravær:<br />* 'Syg'<br />* 'Ekstern Opgave',<br />'Job Samtale', 'Forsinket',<br />'Ikke Godkendt', 'Andet',<br />'Datastue',<br />'Ulovlig fravær',<br />'Ferie / Fridag',<br />'?', 'Corona' |
 | $action            | Mulighed for at styre handling af data                  |
 | $token             | Token fra Tjekind enheden                               |
 
