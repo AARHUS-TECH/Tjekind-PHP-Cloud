@@ -45,7 +45,7 @@ if ( $userID)// && $groupID && $fornavn && $efternavn && $status && $tjekind_tim
 		if ( $userID && $fornavn && $efternavn )
 		{
 			// User is valid
-			$sql_update = "UPDATE 
+			/*$sql_update = "UPDATE
 								tjekind_brugere 
 						   SET
 								groupID = $groupID, 
@@ -54,9 +54,9 @@ if ( $userID)// && $groupID && $fornavn && $efternavn && $status && $tjekind_tim
 								iSKP = $iSKP, 
 								bemning = \"$bemning\" 
 						   WHERE 
-								userID = $userID;";
+								userID = $userID;";*/
 								
-			echo ($action == "debug")?"\$sql_update = $sql_update\n\r":"";
+			//echo ($action == "debug")?"\$sql_update = $sql_update\n\r":"";
 			/*$update_result = */
 			//$user->update( $userID, $fornavn, $efternavn, $brugernavn, $adgangskode, $magnetstribe, $iSKP, $bemning );
 			
