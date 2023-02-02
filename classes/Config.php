@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Beskrivelse kommer snarest
  *

@@ -1,5 +1,5 @@
 <?php
-/* 
+/**
  * PHP makes use of mail() function to send an email. This function requires three mandatory arguments that specify the recipient's
  * email address, the subject of the the message and the actual message additionally there are other two optional parameters.
  *
@@ -25,6 +25,7 @@ class SendMail
 	public $message;    // * Required. Defines the message to be sent. Each line should be separated with a LF (\n). Lines should not exceed 70 characters
 	public $headers;    //   Optional. Specifies additional headers, like From, Cc, and Bcc. The additional headers should be separated with a CRLF (\r\n)
 	public $parameters; //   Optional. Specifies an additional parameter to the send mail program
+	public $region;     //   Optional. Specifies the region of the email. The region is used to determine the email address of the receiver
 
 	
 	// Methods
@@ -50,9 +51,9 @@ class SendMail
 	function __construct($region, $subject, $message) {
 		require_once(realpath (dirname(__FILE__))."/config/dbconfig.php");
 		
-		$this->region  = ( isset($region) && $region!="" )?$region:0;
 		$this->to      = $region_mail[$region];
 		$this->subject = ( isset($subject) && $subject != "")?$subject:"Tjekind Cloud besked";
+		$this->region  = ( isset($region) && $region!="" )?$region:0;
 		$this->message = ( isset($message) && $message != "")?$message:"Mail sendt fra Tjekinds Cloud API";
 
 		$header  = "From:kontakt@ats-skpdatait.dk\r\n";
