@@ -59,18 +59,18 @@ Frontend: remoteRequest.php8
 
 ### Urlen indeholder følgende felter i GET eller POST HTTP request
 
-| GET/POST var       | Funktion                               |
-| ------------------ | -------------------------------------- |
-| $userID            | Bruger ID fra den oprindelige database |
+| GET/POST var       | Funktion                                                |
+| ------------------ | ------------------------------------------------------- |
+| $userID            | Bruger ID fra den oprindelige database                  |
 | $groupID           | Gruppe ID som adskiller elever i <br />regioner / zoner |
-| $fornavn           | Fornavn(e) |
-| $efternavn         | Efternavn  |
-| $status            | Status: enum '0', '1', '2' |
-| $tjekind_timestamp | MySQL current_timestamp()              |
-| $iSKP              | iSKP enum '0', '1'                     |
+| $fornavn           | Fornavn(e)                                              |
+| $efternavn         | Efternavn                                               |
+| $status            | Status: enum '0', '1', '2'                              |
+| $tjekind_timestamp | MySQL current_timestamp()                               |
+| $iSKP              | iSKP enum '0', '1'                                      |
 | $bemning           | Årsag til fravær: enum: <br />'Syg',<br />'Ekstern Opgave',<br />'Job | Samtale',<br />'Forsinket',<br />'Ikke Godkendt',<br />'Andet',<br />'Datastue',<br />'Ulovlig fravær',<br />'Ferie / Fridag',<br />'?',<br/>'Corona' |
-| $action            | Mulighed for at styre handling af data |
-| $token             | Token fra Tjekind enheden              |
+| $action            | Mulighed for at styre handling af data                  |
+| $token             | Token fra Tjekind enheden                               |
 
 
 
