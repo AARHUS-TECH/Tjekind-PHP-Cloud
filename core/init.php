@@ -47,7 +47,7 @@ $GLOBALS['config'] = array(
 );
 
 spl_autoload_register(function($class) {
-    require_once $_SERVER["DOCUMENT_ROOT"] . 'cloud/classes/' . $class . '.php';
+    require_once $_SERVER["DOCUMENT_ROOT"] . '/cloud/classes/' . $class . '.php';
 });
 
 /** Absolute path to the Tjekind directory. */
