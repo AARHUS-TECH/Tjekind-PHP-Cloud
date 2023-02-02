@@ -6,9 +6,9 @@ Formålet er at opgradere Tjekind for at indhente data fra flere forskellige aut
 
 ## Dependencies
 
-* Bootstrap 5.2 <br />[Get started with Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
-* jQuery 3.6.3 <br />[jQuery](https://jquery.com/)
-* Popper 2.11.6 <br />[TOOLTIP & POPOVER POSITIONING ENGINE](https://popper.js.org/)
+* Bootstrap 5.2 <br />Ref: [Get started with Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+* jQuery 3.6.3 <br />Ref: [jQuery](https://jquery.com/)
+* Popper 2.11.6 <br />Ref: [TOOLTIP & POPOVER POSITIONING ENGINE](https://popper.js.org/)
 
 ## Todo
 
