@@ -49,3 +49,11 @@ $GLOBALS['config'] = array(
 spl_autoload_register(function($class) {
     require_once $_SERVER["DOCUMENT_ROOT"] . '/classes/' . $class . '.php';
 });
+
+/** Absolute path to the Tjekind directory. */
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+}
+
+/** Sets up WordPress vars and included files. */
+//require_once( ABSPATH . 'wp-settings.php' );
