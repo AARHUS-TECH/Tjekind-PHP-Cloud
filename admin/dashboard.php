@@ -88,7 +88,7 @@ require_once( TEMPLATES. 'html_head.php');
 							</h2>
 							<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
 								<div class="accordion-body">
-									<center>
+									<div style="text-align: center;">
 									<div id="statusFilterHalvSkaerm" style="display: inline-flex; padding-top: 5px; padding-bottom: 10px;">
 										<div id="filterbullet" onclick="flipfilter('all');" style="color: white;">
 											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 12px; margin-left: 5px;">
@@ -114,13 +114,13 @@ require_once( TEMPLATES. 'html_head.php');
 											</svg>
 										</div>
 									</div>
-									</center>
+									</div>
 									<table id="elevTable" class="table table-hover" unselectable="on" onselectstart="return false">
 										<thead class="dashboard-mobile">
 											<tr>
 												<th style="width: 30%;">Navn&nbsp;
 													<a id="namesort" role="button" onclick="sort='fornavn';sortDir();">
-														<svg id="name_asc" aria-hidden="false" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10" style="display: inline-block; width: 13px; margin: 0px; padding: 0px; vertical-align: middle; margin-left: 5px;">
+														<svg id="name_asc" aria-hidden="false" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10" style="display: inline-block; width: 13px; margin: 0; padding: 0px; vertical-align: middle; margin-left: 5px;">
 															<path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" class=""></path>
 														</svg>
 														<svg id="name_desc" aria-hidden="true" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-down fa-w-10" style="display: none; width: 13px;margin: 0px;padding: 0px;vertical-align: middle;margin-left: 5px;">
@@ -229,15 +229,15 @@ require_once( TEMPLATES. 'html_head.php');
 		<script src="/assets/js/sortlist.js"></script>
 		
 		<script>
-			var y = <?php echo (isset($_REQUEST['y']))?$_REQUEST['y']:0; ?>;
-			var scroll_once=false;
-			var del = false;
-			var inactive = false;
-			var sort='fornavn';
-			var sortdirection='ASC';
-			var filter = '<?php echo isset($_REQUEST['filter'])?urldecode ( $_REQUEST['filter'] ):$filter; ?>';
-			var urlactive;
-			var urlinactive;
+			let y             = <?php echo (isset($_REQUEST['y']))?$_REQUEST['y']:0; ?>;
+			let scroll_once   = false;
+			let del           = false;
+			let inactive      = false;
+			let sort          ='fornavn';
+			let sortdirection ='ASC';
+			let filter        = '<?php echo isset($_REQUEST['filter'])?urldecode ( $_REQUEST['filter'] ):$filter; ?>';
+			let urlactive;
+			let urlinactive;
 
 			$(document).ready(function(){
 				var y=<?php echo isset($_REQUEST['y'])?$_REQUEST['y']:0; ?>;
