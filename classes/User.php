@@ -174,7 +174,7 @@ class User {
 	}
 
 
-	public function update($userID, $fornavn, $efternavn, $brugernavn, $password = null, $magnetstribe, $iSKP, $bemning = null) {
+	public function update($userID, $fornavn, $efternavn, $brugernavn, $password, $magnetstribe, $iSKP, $bemning = null) {
 		if(!$password == null) {
 			$data = array(
 				'fornavn'		   => $fornavn,
