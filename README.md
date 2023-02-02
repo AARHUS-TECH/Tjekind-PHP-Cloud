@@ -46,22 +46,31 @@ project-root/
 ```
 
 ## Remote request fra Tjekind systemer
+
 Kørsel af request forudsætter adgang til internettet
 
-Filen tilgåes
+### Funktionen består at 2 filer: en klasse fil og siden som modtager data og giver resultatet i en JSON fil
+
+Class: RemoteAccess.php
+Frontend: remoteRequest.php8
+
+### Funktionen tilgåes gennem
   https://cloud.ats-skpdatait.dk/admin/remoteRequest.php
 
 ### Urlen indeholder følgende felter i GET eller POST HTTP request
-	$userID            = ( isset($_REQUEST['userID']) )           ?trim( $_REQUEST['userID']    )        :NULL;
-	$groupID           = ( isset($_REQUEST['groupID']) )          ?trim( $_REQUEST['groupID']   )        :NULL;
-	$fornavn           = ( isset($_REQUEST['fornavn']) )          ?trim( $_REQUEST['fornavn']   )        :NULL;
-	$efternavn         = ( isset($_REQUEST['efternavn']) )        ?trim( $_REQUEST['efternavn'] )        :NULL;
-	$status            = ( isset($_REQUEST['status']) )           ?trim( $_REQUEST['status']    )        :NULL; // enum '0', '1', '2'
-	$tjekind_timestamp = ( isset($_REQUEST['tjekind_timestamp']) )?trim( $_REQUEST['tjekind_timestamp']) :NULL; // MySQL current_timestamp()
-	$iSKP              = ( isset($_REQUEST['iSKP']) )             ?trim( $_REQUEST['iSKP']      )        :NULL; // enum '0', '1'
-	$bemning           = ( isset($_REQUEST['bemning']) )          ?trim( $_REQUEST['bemning']   )        :NULL; // enum 'Syg','Ekstern Opgave','Job Samtale','Forsinket','Ikke Godkendt','Andet','Datastue','Ulovlig fravær','Ferie / Fridag','?','Corona'
-	$action			   = ( isset($_REQUEST['action']) )           ?trim( $_REQUEST['action']    )        :NULL;
-	$token             = ( isset($_REQUEST['token']) )            ?trim( urldecode( $_REQUEST['token'] )):NULL; echo ($action == "debug")?"\$token = $token\n\r":"";
+
+| GET/POST var       | Funktion                               |
+| ***                | ***                                    |
+| $userID            | Bruger ID fra den oprindelige database |
+| $groupID           | Gruppe ID som adskiller elever i <br />regioner / zoner |
+| $fornavn           | Fornavn(e) |
+| $efternavn         | Efternavn  |
+| $status            | Status: enum '0', '1', '2' |
+| $tjekind_timestamp | MySQL current_timestamp()              |
+| $iSKP              | iSKP enum '0', '1'                     |
+| $bemning           | Årsag til fravær: enum: <br />'Syg',<br />'Ekstern Opgave',<br />'Job | Samtale',<br />'Forsinket',<br />'Ikke Godkendt',<br />'Andet',<br />'Datastue',<br />'Ulovlig fravær',<br />'Ferie / Fridag',<br />'?',<br/>'Corona' |
+| $action            | Mulighed for at styre handling af data |
+| $token             | Token fra Tjekind enheden              |
 
 
 
