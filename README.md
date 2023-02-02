@@ -60,7 +60,7 @@ Frontend: remoteRequest.php8
 ### Urlen indeholder følgende felter i GET eller POST HTTP request
 
 | GET/POST var       | Funktion                               |
-| ***                | ***                                    |
+| ------------------ | -------------------------------------- |
 | $userID            | Bruger ID fra den oprindelige database |
 | $groupID           | Gruppe ID som adskiller elever i <br />regioner / zoner |
 | $fornavn           | Fornavn(e) |
