@@ -14,12 +14,12 @@ if (isset($_GET['temp']) && isset($_GET['hum'])) {
  
     // Include data base connect class
     $filepath = realpath (dirname(__FILE__));
-	require_once($filepath."/core/dbconnect.php");
+	require_once($filepath."/config/dbconnect.php");
  
     // Connecting to database 
     //$db = new DB_CONNECT();
 	$filepath = realpath (dirname(__FILE__));
-    require_once($filepath."/core/dbconfig.php");
+    require_once($filepath."/config/dbconfig.php");
 	$con = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE) or die( mysqli_error() );
  
     // Fire SQL query to insert data in weather

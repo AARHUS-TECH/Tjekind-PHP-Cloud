@@ -1,6 +1,6 @@
 
 <?php
-require_once('../core/init.php');
+require_once('../config/init.php');
 $y        = ( isset($_REQUEST['y'])      && $_REQUEST['y']!='')?$_REQUEST['y']:0;
 $user = new User();
 if( isset($_REQUEST['sort']) )

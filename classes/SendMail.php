@@ -48,7 +48,7 @@ class SendMail
 
 	// Constructors
 	function __construct($region, $subject, $message) {
-		require_once(realpath (dirname(__FILE__))."/core/dbconfig.php");
+		require_once(realpath (dirname(__FILE__))."/config/dbconfig.php");
 		
 		$this->region  = ( isset($region) && $region!="" )?$region:0;
 		$this->to      = $region_mail[$region];

@@ -3,7 +3,7 @@ header("Location: /admin/");
 //exit();
 
 
-require_once('core/init.php');
+require_once('config/init.php');
 
 $user = new User();
 $user->auth();

@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction']))
 function func()
 {
 
-require_once('../core/init.php');
+require_once('../config/init.php');
 
 	$username = Config::get('database/username');
 	$password = Config::get('database/password');
