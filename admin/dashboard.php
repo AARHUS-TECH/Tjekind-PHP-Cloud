@@ -1,5 +1,5 @@
 <?php
-require_once(ABSPATH . '/core/init.php');
+require_once('../core/init.php');
 
 $user = new User();
 
@@ -12,7 +12,7 @@ if(Session::exists('userID')) {
 	Redirect::to('/');
 }
 
-print("<P>".ABSPATH."</P>");
+
 $userdata     = $user->getInfo(Session::get('userID'));
 $filter       = ( isset($_REQUEST['filter']) && $_REQUEST['filter']!='' )?$_REQUEST['filter']:0;
 $y            = ( isset($_REQUEST['y'])      && $_REQUEST['y']!='')?$_REQUEST['y']:0;
