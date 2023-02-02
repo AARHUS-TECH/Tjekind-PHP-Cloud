@@ -53,6 +53,7 @@ spl_autoload_register(function($class) {
 /** Absolute path to the Tjekind directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', $_SERVER["DOCUMENT_ROOT"] . '/cloud/' );
+    define( 'TEMPLATES', $_SERVER["DOCUMENT_ROOT"] . '/cloud/templates/' );
 }
 
 /** Sets up WordPress vars and included files. */
