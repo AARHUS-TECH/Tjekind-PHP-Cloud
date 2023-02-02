@@ -1,4 +1,15 @@
 <?php
+/**
+ * Methods for database connection and queries
+ * 
+ * @package     Tjekind Cloud
+ * @file        insert-student.php "insert-student.php"
+ * @version     0.0.0 - prototype
+ *
+ * @author      Karsten Reitan Sørensen <krs@aarhustech.dk>
+ * @copyright   Aarhus Tech SKP 2023
+ */
+
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
