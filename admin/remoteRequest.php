@@ -14,6 +14,9 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
+require_once('../config/init.php');
+
+
 $remote = new RemoteAccess;
 
 
@@ -41,6 +44,8 @@ if ( isset($_REQUEST['userID']) ) {
     // Include data base connect class
     $filepath = realpath (dirname(__FILE__));
 	require_once($filepath."/config/dbconnect.php");
+
+
  
     // Connecting to database 
     //$db = new DB_CONNECT();
