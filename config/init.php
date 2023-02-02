@@ -62,6 +62,7 @@ spl_autoload_register(function($class) {
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', $_SERVER["DOCUMENT_ROOT"] . '/cloud/' );
     define( 'TEMPLATES', $_SERVER["DOCUMENT_ROOT"] . '/cloud/templates/' );
+    define( 'LOG', $_SERVER["DOCUMENT_ROOT"] . '/var/remote-access.log' );
 }
 
 /** Sets up WordPress vars and included files. */
