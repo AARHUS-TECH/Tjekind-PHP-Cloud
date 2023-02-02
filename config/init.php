@@ -31,7 +31,7 @@ $GLOBALS['config'] = array(
     'info' => array(
         'tjekind_pc_ip' => '::1'
     ),
-    $ip_whitelist => array(
+    'ip_whitelist' => array(
         '10.254.254.25'
     ),
     // Token whitelist som gemmes på lokale klienter efter korrekt login
