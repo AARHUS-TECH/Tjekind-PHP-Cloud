@@ -1,4 +1,19 @@
 var searchData=
 [
-  ['index_2ephp_0',['index.php',['../index_8php.html',1,'']]]
+  ['accessible_2demoji_2emd_1867',['accessible-emoji.md',['../accessible-emoji_8md.html',1,'']]],
+  ['adjacent_2doverload_2dsignatures_2emd_1868',['adjacent-overload-signatures.md',['../adjacent-overload-signatures_8md.html',1,'']]],
+  ['advanced_2dfeatures_2emd_1869',['advanced-features.md',['../advanced-features_8md.html',1,'']]],
+  ['alt_2dtext_2emd_1870',['alt-text.md',['../alt-text_8md.html',1,'']]],
+  ['anchor_2dhas_2dcontent_2emd_1871',['anchor-has-content.md',['../anchor-has-content_8md.html',1,'']]],
+  ['anchor_2dis_2dvalid_2emd_1872',['anchor-is-valid.md',['../anchor-is-valid_8md.html',1,'']]],
+  ['api_2emd_1873',['API.md',['../_a_p_i_8md.html',1,'']]],
+  ['aria_2dactivedescendant_2dhas_2dtabindex_2emd_1874',['aria-activedescendant-has-tabindex.md',['../aria-activedescendant-has-tabindex_8md.html',1,'']]],
+  ['aria_2dprops_2emd_1875',['aria-props.md',['../aria-props_8md.html',1,'']]],
+  ['aria_2dproptypes_2emd_1876',['aria-proptypes.md',['../aria-proptypes_8md.html',1,'']]],
+  ['aria_2drole_2emd_1877',['aria-role.md',['../aria-role_8md.html',1,'']]],
+  ['aria_2dunsupported_2delements_2emd_1878',['aria-unsupported-elements.md',['../aria-unsupported-elements_8md.html',1,'']]],
+  ['array_2dtype_2emd_1879',['array-type.md',['../array-type_8md.html',1,'']]],
+  ['auto_2dgit_2dpull_2epy_1880',['auto-git-pull.py',['../auto-git-pull_8py.html',1,'']]],
+  ['autocomplete_2dvalid_2emd_1881',['autocomplete-valid.md',['../autocomplete-valid_8md.html',1,'']]],
+  ['await_2dthenable_2emd_1882',['await-thenable.md',['../await-thenable_8md.html',1,'']]]
 ];

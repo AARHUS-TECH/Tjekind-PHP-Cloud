@@ -1,7 +1,12 @@
 <?php
 /**
- * Beskrivelse kommer snarest
- *
+ * Reads and sets config values
+ * 
+ * @package     Tjekind Cloud
+ * @file        Config.php "classes/Config.php"
+ * @class       Config  
+ * @version     1.0.0
+ 
  * @author      Benjamin Jørgensen <bj@dunkstormen.dk>
  * @copyright   Aarhus Tech SKP 2017
  */

@@ -1,4 +1,3 @@
-
 <?php
 require_once('../config/init.php');
 $y        = ( isset($_REQUEST['y'])      && $_REQUEST['y']!='')?$_REQUEST['y']:0;

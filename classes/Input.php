@@ -2,10 +2,16 @@
 /**
  * Beskrivelse kommer snarest
  *
+ * @package     Tjekind Cloud
+ * @file        Input.php "classes/Input.php"
+ * @version     1.0
+ *  
  * @author      Benjamin Jørgensen <bj@dunkstormen.dk>
- * @copyright   Aarhus Tech SKP 2017
+ * @author      Karsten Reitan Sørensen <krs@aarhustech.dk>
+ * @copyright   Aarhus Tech SKP 2017-2023
  */
 
+ 
 class Input {
     public static function exists($type = 'post') {
         switch($type) {

@@ -1,7 +1,26 @@
 var searchData=
 [
-  ['db_5fdatabase_0',['DB_DATABASE',['../dbconfig_8php.html#a4798f8ff41893eb12308c2b638b8becf',1,'dbconfig.php']]],
-  ['db_5fpassword_1',['DB_PASSWORD',['../dbconfig_8php.html#a4dca144fafcc7bd3f71cb5778afcdd13',1,'dbconfig.php']]],
-  ['db_5fserver_2',['DB_SERVER',['../dbconfig_8php.html#a046861af9c950733d95478526a7e19ae',1,'dbconfig.php']]],
-  ['db_5fuser_3',['DB_USER',['../dbconfig_8php.html#a1d1d99f8e08f387d84fe9848f3357156',1,'dbconfig.php']]]
+  ['_24ass_2243',['$ass',['../rediger_elev_8php.html#a6dbe6d16ca6599dfd819b2b2d0f282b4',1,'redigerElev.php']]],
+  ['_24bm_2244',['$bm',['../rediger_elev_8php.html#ace9fe3e9ac8b7579fc1cab4e835ebed6',1,'redigerElev.php']]],
+  ['_24data_2245',['$data',['../get_table_8php.html#a6efc15b5a2314dd4b5aaa556a375c6d6',1,'$data():&#160;getTable.php'],['../get_table2_8php.html#a6efc15b5a2314dd4b5aaa556a375c6d6',1,'$data():&#160;getTable2.php']]],
+  ['_24filter_2246',['$filter',['../dashboard_8php.html#aac53bdb48bdd96ff9c20e2a86f48ce5f',1,'$filter():&#160;dashboard.php'],['../profile_8php.html#aac53bdb48bdd96ff9c20e2a86f48ce5f',1,'$filter():&#160;profile.php']]],
+  ['_24globals_2247',['$GLOBALS',['../init_8php.html#a7f860a744b304e18d582ec940d359ed0',1,'$GLOBALS():&#160;init.php'],['../init__mekaniker_8php.html#a7f860a744b304e18d582ec940d359ed0',1,'$GLOBALS():&#160;init_mekaniker.php']]],
+  ['_24headers_2248',['$headers',['../class_send_mail.html#a52500036ee807241b8b4b7e2367c49ef',1,'SendMail']]],
+  ['_24inactiveelev_2249',['$inactiveElev',['../dashboard_8php.html#adb5b3ff4571b62066eec67f0b0b51ef8',1,'$inactiveElev():&#160;dashboard.php'],['../profile_8php.html#adb5b3ff4571b62066eec67f0b0b51ef8',1,'$inactiveElev():&#160;profile.php']]],
+  ['_24ip_5fwhitelist_2250',['$ip_whitelist',['../dbconfig_8php.html#a43a22524a2a834f34f5851c74bb097b7',1,'dbconfig.php']]],
+  ['_24message_2251',['$message',['../class_send_mail.html#abf17cb2dba2ed17cb28aa5f37deb5293',1,'SendMail']]],
+  ['_24parameters_2252',['$parameters',['../class_send_mail.html#ab79d246480c4ac3a0db6bbceca92ad32',1,'SendMail']]],
+  ['_24region_2253',['$region',['../class_send_mail.html#a8e0b4669db3780ee9a03b34083febc7a',1,'SendMail']]],
+  ['_24region_5fmail_2254',['$region_mail',['../dbconfig_8php.html#a93f6b0517eef650624cb0fbeb36d9106',1,'dbconfig.php']]],
+  ['_24remote_2255',['$remote',['../remote_request_8php.html#a7707cf52de31e74828a33ab02af051e6',1,'remoteRequest.php']]],
+  ['_24response_2256',['$response',['../remote_request_8php.html#af4b6fb1bbc77ccc05f10da3b16935b99',1,'$response():&#160;remoteRequest.php'],['../remote_request_8php.html#ad926d37154b0bcc380bdc482bd5a2ebf',1,'$response():&#160;remoteRequest.php']]],
+  ['_24sortdirection_2257',['$sortdirection',['../class_user.html#ac8a087743b231c98cdfe0b6ec60097ba',1,'User']]],
+  ['_24sorting_2258',['$sorting',['../class_user.html#a11c934b65af2cc1278968a7f1e07f32a',1,'User']]],
+  ['_24subject_2259',['$subject',['../class_send_mail.html#afea90503726cd5ad2eb80baf0b6d217d',1,'SendMail']]],
+  ['_24to_2260',['$to',['../class_send_mail.html#ac19f839b525d6d99d063fe56bf2a6d3b',1,'SendMail']]],
+  ['_24token_5fwhitelist_2261',['$token_whitelist',['../dbconfig_8php.html#a46404292c38406ea8b5fa84f1bf27077',1,'dbconfig.php']]],
+  ['_24updatedata_2262',['$updatedata',['../rediger_elev_8php.html#a4c4d987e77dff267c4e03cb2d9ed342b',1,'$updatedata():&#160;redigerElev.php'],['../rediger_instruktoer_8php.html#a4c4d987e77dff267c4e03cb2d9ed342b',1,'$updatedata():&#160;redigerInstruktoer.php']]],
+  ['_24user_2263',['$user',['../dashboard_8php.html#a598ca4e71b15a1313ec95f0df1027ca5',1,'$user():&#160;dashboard.php'],['../get_table_8php.html#a598ca4e71b15a1313ec95f0df1027ca5',1,'$user():&#160;getTable.php'],['../get_table2_8php.html#a598ca4e71b15a1313ec95f0df1027ca5',1,'$user():&#160;getTable2.php'],['../admin_2index_8php.html#a598ca4e71b15a1313ec95f0df1027ca5',1,'$user():&#160;index.php'],['../opret_elev_8php.html#a598ca4e71b15a1313ec95f0df1027ca5',1,'$user():&#160;opretElev.php'],['../opret_instruktoer_8php.html#a598ca4e71b15a1313ec95f0df1027ca5',1,'$user():&#160;opretInstruktoer.php'],['../profile_8php.html#a598ca4e71b15a1313ec95f0df1027ca5',1,'$user():&#160;profile.php'],['../rediger_elev_8php.html#a598ca4e71b15a1313ec95f0df1027ca5',1,'$user():&#160;redigerElev.php'],['../rediger_instruktoer_8php.html#a598ca4e71b15a1313ec95f0df1027ca5',1,'$user():&#160;redigerInstruktoer.php'],['../index_8php.html#a598ca4e71b15a1313ec95f0df1027ca5',1,'$user():&#160;index.php']]],
+  ['_24userdata_2264',['$userdata',['../dashboard_8php.html#af70e594e86a310311c717b13e6ecac00',1,'$userdata():&#160;dashboard.php'],['../opret_elev_8php.html#af70e594e86a310311c717b13e6ecac00',1,'$userdata():&#160;opretElev.php'],['../opret_instruktoer_8php.html#af70e594e86a310311c717b13e6ecac00',1,'$userdata():&#160;opretInstruktoer.php'],['../profile_8php.html#af70e594e86a310311c717b13e6ecac00',1,'$userdata():&#160;profile.php'],['../rediger_elev_8php.html#af70e594e86a310311c717b13e6ecac00',1,'$userdata():&#160;redigerElev.php'],['../rediger_instruktoer_8php.html#af70e594e86a310311c717b13e6ecac00',1,'$userdata():&#160;redigerInstruktoer.php']]],
+  ['_24y_2265',['$y',['../dashboard_8php.html#a77b973d137fb33212e018b042df6e3e7',1,'$y():&#160;dashboard.php'],['../get_table_8php.html#a77b973d137fb33212e018b042df6e3e7',1,'$y():&#160;getTable.php'],['../profile_8php.html#a77b973d137fb33212e018b042df6e3e7',1,'$y():&#160;profile.php']]]
 ];

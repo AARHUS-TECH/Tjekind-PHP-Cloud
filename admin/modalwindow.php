@@ -1,4 +1,17 @@
-<!-- region Modalvindue #for at tjekke kort data -->
+<?php
+/**
+ * Modal window for scanning card
+ * 
+ * @package     Tjekind Cloud
+ * @file        modalwindow.php "admin/modalwindow.php"
+ * @version     1.2
+ *
+ * @author      Karsten Reitan Sørensen <krs@aarhustech.dk>
+ * @copyright   Aarhus Tech SKP 2023
+ */
+
+
+?><!-- region Modalvindue #for at tjekke kort data -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

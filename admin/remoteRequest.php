@@ -3,7 +3,7 @@
  * Methods for database connection and queries
  * 
  * @package     Tjekind Cloud
- * @file        insert-student.php "insert-student.php"
+ * @file        remoteRequest.php "remoteRequest.php"
  * @version     0.0.0 - prototype
  *
  * @author      Karsten Reitan Sørensen <krs@aarhustech.dk>
@@ -13,6 +13,9 @@
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
+
+$remote = new RemoteAccess;
+
 
 //Creating Array for JSON response
 $response = array();

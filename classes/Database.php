@@ -1,23 +1,20 @@
 <?php
 /**
- * Beskrivelse kommer snarest
+ * Methods for database connection and queries
+ * 
+ * @package     Tjekind Cloud
+ * @file        Database.php "classes/Database.php"
+ * @version     1.2
  *
  * @author      Benjamin Jørgensen <bj@dunkstormen.dk>
- * @copyright   Aarhus Tech SKP 2018
- * @version     1.2
+ * @author 		Karsten Reitan Sørensen <krs@aarhustech.dk>
+ * @copyright   Aarhus Tech SKP 2018-2023
  */
 
+ 
 class Database {
+    private $pdo;
 
-    private PDO $pdo;
-
-    /**
-     * @return PDO
-     */
-    public function getPdo(): PDO
-    {
-        return $this->pdo;
-    }
 
     public function __construct()
     {

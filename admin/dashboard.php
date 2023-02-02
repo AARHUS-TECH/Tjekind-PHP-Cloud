@@ -1,4 +1,18 @@
 <?php
+<?php
+/**
+ * [TODO: description]
+ * 
+ * @package     Tjekind Cloud
+ * @file        dashboard.php "admin/dashboard.php"
+ * @version     2.3
+ * 
+ * @author      Benjamin Jørgensen <bj@dunkstormen.dk>
+ * @author 		Karsten Reitan Sørensen <krs@aarhustech.dk>
+ * @copyright   Aarhus Tech SKP 2018-2023
+ */
+
+
 require_once('../config/init.php');
 
 $user = new User();
