@@ -39,7 +39,7 @@ $GLOBALS['config'] = array(
         'krs' => "cj>!pQLMseLRx}oqM/8'3Q~{nP(R;W", 
         'umf' => "VtI0mwKqd.hj(ws%HQzm|q(qIn-uHt",
         'sas' => "X.#h9h87/J*{1`d5LaV@SMH/g?*BBc",
-        'reservet' => "3Lw~7|Xw8'qq#xQ?AQZ+L85x3Ko|&0",
+        'reserveret' => "3Lw~7|Xw8'qq#xQ?AQZ+L85x3Ko|&0",
     ),
     // Token som sendes fra lokale Tjekind enheder ved request
     'token_terminal' => array(
@@ -57,8 +57,8 @@ $GLOBALS['config'] = array(
 );
 
 spl_autoload_register(function($class) {
-    //require_once $_SERVER["DOCUMENT_ROOT"] . '/cloud/classes/' . $class . '.php';
-    require_once $_SERVER["DOCUMENT_ROOT"] . '/classes/' . $class . '.php';
+    require_once $_SERVER["DOCUMENT_ROOT"] . '/cloud/classes/' . $class . '.php';
+    //require_once $_SERVER["DOCUMENT_ROOT"] . '/classes/' . $class . '.php';
 });
 
 /** Absolute paths to the Tjekind directories. */
